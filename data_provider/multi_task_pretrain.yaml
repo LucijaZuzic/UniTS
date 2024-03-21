@@ -3,9 +3,11 @@ task_dataset:
   task_name: pretrain_long_term_forecast
   dataset_name: direction
   dataset: direction
-  data: direction
-  root_path: ../dataset/direction
+  data: custom
+  root_path: dataset
+  data_path: direction
   seq_len: 2
+  label_len: 0
   pred_len: 1
   features: M
   embed: timeF
@@ -17,9 +19,11 @@ task_dataset:
   task_name: pretrain_long_term_forecast
   dataset_name: latitude_no_abs
   dataset: latitude_no_abs
-  data: latitude_no_abs
-  root_path: ../dataset/latitude_no_abs
+  data: custom
+  root_path: dataset
+  data_path: latitude_no_abs
   seq_len: 2
+  label_len: 0
   pred_len: 1
   features: M
   embed: timeF
@@ -31,9 +35,11 @@ task_dataset:
   task_name: pretrain_long_term_forecast
   dataset_name: longitude_no_abs
   dataset: longitude_no_abs
-  data: longitude_no_abs
-  root_path: ../dataset/longitude_no_abs
+  data: custom
+  root_path: dataset
+  data_path: longitude_no_abs
   seq_len: 2
+  label_len: 0
   pred_len: 1
   features: M
   embed: timeF
@@ -45,9 +51,11 @@ task_dataset:
   task_name: pretrain_long_term_forecast
   dataset_name: speed
   dataset: speed
-  data: speed
-  root_path: ../dataset/speed
+  data: custom
+  root_path: dataset
+  data_path: speed
   seq_len: 2
+  label_len: 0
   pred_len: 1
   features: M
   embed: timeF
@@ -59,9 +67,11 @@ task_dataset:
   task_name: pretrain_long_term_forecast
   dataset_name: time
   dataset: time
-  data: time
-  root_path: ../dataset/time
+  data: custom
+  root_path: dataset
+  data_path: time
   seq_len: 2
+  label_len: 0
   pred_len: 1
   features: M
   embed: timeF
