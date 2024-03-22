@@ -43,11 +43,12 @@ if __name__ == '__main__':
     parser.add_argument('--min_keep_ratio', type=float, default=None,
                         help='min crop ratio for various length in pretraining')
 
-    # ddp 
-    import os
-    os.environ['MASTER_ADDR'] = 'localhost'
-    os.environ['MASTER_PORT'] = '12345'
-    torch.distributed.init_process_group(backend='gloo', rank=0, world_size=1) 
+    # ddp
+    parser.add_argument('--local-rank', type=int, help='local rank')
+    parser.add_argument("--dist_url", default="env://", type=str, help="""url used to set up
+        distributed training; see https://pytorch.org/docs/stable/distributed.html""")
+    parser.add_argument('--num_workers', type=int, default=0,
+                        help='data loader num workers')
 
     # optimization
     parser.add_argument('--itr', type=int, default=1, help='experiments times')
@@ -93,6 +94,11 @@ if __name__ == '__main__':
     parser.add_argument("--prompt_num", type=int, default=10)
 
     args = parser.parse_args()
+    #init_distributed_mode(args) 
+    import os
+    os.environ['MASTER_ADDR'] = 'localhost'
+    os.environ['MASTER_PORT'] = '12345'
+    torch.distributed.init_process_group(backend='gloo', rank=0, world_size=1)
 
     print('Args in experiment:')
     print(args)
@@ -109,7 +115,16 @@ if __name__ == '__main__':
         args.d_model,
         args.e_layers,
         args.des)
- 
+
+    if is_main_process():
+        wandb.init(
+            name=exp_name,
+            # set the wandb project where this run will be logged
+            project="pretrain",
+            # track hyperparameters and run metadata
+            config=args,
+            mode=args.debug,
+        )
     Exp = Exp_All_Task_SSL
 
     if args.is_training:

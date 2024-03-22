@@ -1,12 +1,13 @@
-task_dataset:
+task_dataset_new:
  direction:
   task_name: pretrain_long_term_forecast
-  dataset_name: direction
-  dataset: direction
+  frequency: 1S
+  dataset_new_name: direction
+  dataset_new: direction
   data: custom
-  root_path: dataset
-  data_path: direction
-  seq_len: 2
+  root_path: dataset_new/direction
+  data_path: newdata_ALL.csv
+  seq_len: 1
   label_len: 0
   pred_len: 1
   features: M
@@ -17,12 +18,13 @@ task_dataset:
 
  latitude_no_abs:
   task_name: pretrain_long_term_forecast
-  dataset_name: latitude_no_abs
-  dataset: latitude_no_abs
+  frequency: 1S
+  dataset_new_name: latitude_no_abs
+  dataset_new: latitude_no_abs
   data: custom
-  root_path: dataset
-  data_path: latitude_no_abs
-  seq_len: 2
+  root_path: dataset_new/latitude_no_abs
+  data_path: newdata_ALL.csv
+  seq_len: 1
   label_len: 0
   pred_len: 1
   features: M
@@ -33,12 +35,13 @@ task_dataset:
 
  longitude_no_abs:
   task_name: pretrain_long_term_forecast
-  dataset_name: longitude_no_abs
-  dataset: longitude_no_abs
+  frequency: 1S
+  dataset_new_name: longitude_no_abs
+  dataset_new: longitude_no_abs
   data: custom
-  root_path: dataset
-  data_path: longitude_no_abs
-  seq_len: 2
+  root_path: dataset_new/longitude_no_abs
+  data_path: newdata_ALL.csv
+  seq_len: 1
   label_len: 0
   pred_len: 1
   features: M
@@ -49,12 +52,13 @@ task_dataset:
 
  speed:
   task_name: pretrain_long_term_forecast
-  dataset_name: speed
-  dataset: speed
+  frequency: 1S
+  dataset_new_name: speed
+  dataset_new: speed
   data: custom
-  root_path: dataset
-  data_path: speed
-  seq_len: 2
+  root_path: dataset_new/speed
+  data_path: newdata_ALL.csv
+  seq_len: 1
   label_len: 0
   pred_len: 1
   features: M
@@ -65,12 +69,13 @@ task_dataset:
 
  time:
   task_name: pretrain_long_term_forecast
-  dataset_name: time
-  dataset: time
+  frequency: 1S
+  dataset_new_name: time
+  dataset_new: time
   data: custom
-  root_path: dataset
-  data_path: time
-  seq_len: 2
+  root_path: dataset_new/time
+  data_path: newdata_ALL.csv
+  seq_len: 1
   label_len: 0
   pred_len: 1
   features: M
