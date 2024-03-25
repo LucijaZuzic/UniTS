@@ -4,7 +4,7 @@ task_dataset:
     dataset_name: solar_10_minutes
     dataset: Solar
     data: gluonts
-    root_path: ../dataset/gluonts
+    root_path: dataset/gluonts
     seq_len: 128
     label_len: 0
     pred_len: 64
@@ -19,7 +19,7 @@ task_dataset:
     dataset_name: saugeenday
     dataset: Saugeen_River
     data: gluonts
-    root_path: ../dataset/gluonts
+    root_path: dataset/gluonts
     seq_len: 256
     label_len: 0
     pred_len: 128
@@ -34,7 +34,7 @@ task_dataset:
     dataset_name: hospital
     dataset: Hospital
     data: gluonts
-    root_path: ../dataset/gluonts
+    root_path: dataset/gluonts
     seq_len: 32
     label_len: 0
     pred_len: 16
@@ -49,7 +49,7 @@ task_dataset:
     dataset_name: kaggle_web_traffic_without_missing
     dataset: Web_Traffic
     data: gluonts
-    root_path: ../dataset/gluonts
+    root_path: dataset/gluonts
     seq_len: 160
     label_len: 0
     pred_len: 80

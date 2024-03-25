@@ -111,7 +111,11 @@ if __name__ == '__main__':
                         type=str, default=None, help='unify')
 
     args = parser.parse_args()
-    init_distributed_mode(args)
+    #init_distributed_mode(args)
+    import os
+    os.environ['MASTER_ADDR'] = 'localhost'
+    os.environ['MASTER_PORT'] = '12345'
+    torch.distributed.init_process_group(backend='gloo', rank=0, world_size=1)
     if args.fix_seed is not None:
         random.seed(args.fix_seed)
         torch.manual_seed(args.fix_seed)
