@@ -1,0 +1,80 @@
+{
+    "os": "Windows-10-10.0.22631-SP0",
+    "python": "3.11.5",
+    "heartbeatAt": "2024-03-22T08:01:57.273510",
+    "startedAt": "2024-03-22T08:01:56.263403",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--is_training",
+        "0",
+        "--model_id",
+        "UniTS_zeroshot_pretrain_x64",
+        "--model",
+        "UniTS_zeroshot",
+        "--prompt_num",
+        "10",
+        "--patch_len",
+        "16",
+        "--stride",
+        "16",
+        "--e_layers",
+        "3",
+        "--d_model",
+        "64",
+        "--des",
+        "Exp",
+        "--debug",
+        "online",
+        "--project_name",
+        "zeroshot_newdata",
+        "--pretrained_weight",
+        "auto",
+        "--task_data_config_path",
+        "data_provider/zeroshot_task.yaml"
+    ],
+    "state": "running",
+    "program": "C:\\Users\\lzuzi\\Documents\\GitHub\\UniTS\\run.py",
+    "codePathLocal": "run.py",
+    "codePath": "run.py",
+    "git": {
+        "remote": "https://github.com/LucijaZuzic/UniTS.git",
+        "commit": "fca7acc3f73f8cb0b430b67f53d6b5ad0e2a262d"
+    },
+    "email": "42736956+LucijaZuzic@users.noreply.github.com",
+    "root": "C:/Users/lzuzi/Documents/GitHub/UniTS",
+    "host": "DESKTOP-TSR9DU2",
+    "username": "lzuzi",
+    "executable": "C:\\Users\\lzuzi\\anaconda3\\python.exe",
+    "cpu_count": 24,
+    "cpu_count_logical": 32,
+    "cpu_freq": {
+        "current": 3200.0,
+        "min": 0.0,
+        "max": 3200.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3200.0,
+            "min": 0.0,
+            "max": 3200.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 1906.3173789978027,
+            "used": 1845.7222785949707
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 4090",
+            "memory_total": 25757220864
+        }
+    ],
+    "memory": {
+        "total": 31.754302978515625
+    }
+}
