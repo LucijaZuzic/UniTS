@@ -1,0 +1,31 @@
+torchrun --nnodes 1 --nproc-per-node 2 --master_port $random_port run_pretrain.py --is_training 1 --model_id $exp_name --model $model_name  --prompt_num 10  --patch_len 16  --stride 16   --e_layers 3  --d_model $d_model  --des 'Exp' --acc_it 128  --batch_size 32  --learning_rate 5e-5  --min_lr 1e-4  --weight_decay 5e-6  --train_epochs 10  --warmup_epochs 0  --min_keep_ratio 0.5  --right_prob 0.5  --min_mask_ratio 0.7  --max_mask_ratio 0.8  --debug $wandb_mode  --task_data_config_path data_provider/multi_task_pretrain.yaml
+
+torchrun --nnodes 1 --nproc-per-node 2 --master_port 3435 run_pretrain.py --is_training 1 --model_id UniTS_zeroshot_pretrain_x64 --model UniTS_zeroshot  --prompt_num 10 --patch_len 16  --stride 16   --e_layers 3  --d_model 64 --des 'Exp' --acc_it 128  --batch_size 32  --learning_rate 5e-5  --min_lr 1e-4  --weight_decay 5e-6  --train_epochs 10  --warmup_epochs 0  --min_keep_ratio 0.5  --right_prob 0.5  --min_mask_ratio 0.7  --max_mask_ratio 0.8  --debug online --task_data_config_path data_provider/multi_task_pretrain.yaml
+
+cc35601c25927d1089cbb3569f657db1b3a07532
+
+python run_pretrain.py --is_training 1 --model_id UniTS_zeroshot_pretrain_x64 --model UniTS_zeroshot  --prompt_num 10 --patch_len 16  --stride 16   --e_layers 3  --d_model 64 --des 'Exp' --acc_it 128  --batch_size 32  --learning_rate 5e-5  --min_lr 1e-4  --weight_decay 5e-6  --train_epochs 10  --warmup_epochs 0  --min_keep_ratio 0.5  --right_prob 0.5  --min_mask_ratio 0.7  --max_mask_ratio 0.8  --debug online --task_data_config_path data_provider/multi_task_pretrain_original.yaml
+
+
+wandb:  View run ALL_task_UniTS_zeroshot_pretrain_x64_UniTS_zeroshot_All_ftM_dm64_el3_Exp at: https://wandb.ai/lucija_zuzic/pretrain/runs/5vysq9d1
+wandb:  View job at https://wandb.ai/lucija_zuzic/pretrain/jobs/QXJ0aWZhY3RDb2xsZWN0aW9uOjE1MTAxMjQwOQ==/version_details/v1
+
+python run.py --is_training 0  --model_id UniTS_zeroshot_pretrain_x64 --model UniTS_zeroshot --prompt_num 10  --patch_len 16 --stride 16  --e_layers 3 --d_model 64   --des 'Exp' --debug online   --project_name zeroshot_newdata  --pretrained_weight auto  --task_data_config_path data_provider/zeroshot_task_original.yaml
+
+python run.py --is_training 0 --zero_shot_forecasting_new_length unify --max_offset 384 --offset 384 --model_id UniTS_pretrain_x128 --model UniTS --lradj prompt_tuning --prompt_num 10 --patch_len 16 --stride 16 --e_layers 3 --d_model 128 --des 'Exp' --itr 1 --debug disabled --project_name prompt_tuning --pretrained_weight pretrain_ckpt.pth --task_data_config_path data_provider/multitask_zero_shot_new_length_original.yaml
+
+C:\Users\RYZEN\AppData\Roaming\Python\Python311\Scripts
+
+python run_pretrain.py --is_training 1 --model_id UniTS_zeroshot_pretrain_x64_mine_train --model UniTS_zeroshot  --prompt_num 10 --patch_len 16  --stride 16   --e_layers 3  --d_model 64 --des 'Exp' --acc_it 128  --batch_size 32  --learning_rate 5e-5  --min_lr 1e-4  --weight_decay 5e-6  --train_epochs 10  --warmup_epochs 0  --min_keep_ratio 0.5  --right_prob 0.5  --min_mask_ratio 0.7  --max_mask_ratio 0.8  --debug online --task_data_config_path data_provider/1/multi_task_pretrain.yaml
+
+python run.py --is_training 0 --zero_shot_forecasting_new_length unify --max_offset 384 --offset 384 --model_id UniTS_pretrain_x128_mine_val --model UniTS --lradj prompt_tuning --prompt_num 10 --patch_len 16 --stride 16 --e_layers 3 --d_model 128 --des 'Exp' --itr 1 --debug disabled --project_name prompt_tuning_mine_val --pretrained_weight checkpoints/ALL_task_UniTS_zeroshot_pretrain_x64_UniTS_zeroshot_All_ftM_dm64_el3_Exp_0/pretrain_ckpt.pth --task_data_config_path data_provider/1/zeroshot_task_val.yaml
+
+python run.py --is_training 0 --zero_shot_forecasting_new_length unify --max_offset 384 --offset 384 --model_id UniTS_pretrain_x128_mine_test --model UniTS --lradj prompt_tuning --prompt_num 10 --patch_len 16 --stride 16 --e_layers 3 --d_model 128 --des 'Exp' --itr 1 --debug disabled --project_name prompt_tuning_mine_test --pretrained_weight checkpoints/ALL_task_UniTS_zeroshot_pretrain_x64_UniTS_zeroshot_All_ftM_dm64_el3_Exp_0/pretrain_ckpt.pth --task_data_config_path data_provider/1/zeroshot_task.yaml
+
+python run.py --is_training 0 --zero_shot_forecasting_new_length unify --max_offset 384 --offset 384 --model_id UniTS_pretrain_x128_mine_val_128 --model UniTS --lradj prompt_tuning --prompt_num 10 --patch_len 16 --stride 16 --e_layers 3 --d_model 128 --des 'Exp' --itr 1 --debug disabled --project_name prompt_tuning_mine_val_128 --pretrained_weight scripts/pretrain_prompt_learning/UniTS_pretrain_x128.sh --task_data_config_path data_provider/1/zeroshot_task_val.yaml
+
+python run.py --is_training 0 --zero_shot_forecasting_new_length unify --max_offset 384 --offset 384 --model_id UniTS_pretrain_x128_mine_test_128 --model UniTS --lradj prompt_tuning --prompt_num 10 --patch_len 16 --stride 16 --e_layers 3 --d_model 128 --des 'Exp' --itr 1 --debug disabled --project_name prompt_tuning_mine_test_128 --pretrained_weight scripts/pretrain_prompt_learning/UniTS_pretrain_x128.sh --task_data_config_path data_provider/1/zeroshot_task.yaml
+
+python run.py --is_training 0  --model_id UniTS_zeroshot_pretrain_x64_mine_val --model UniTS_zeroshot --prompt_num 10  --patch_len 16 --stride 16  --e_layers 3 --d_model 64   --des 'Exp' --debug online   --project_name zeroshot_newdata_mine_val  --pretrained_weight auto  --task_data_config_path data_provider/1/zeroshot_task_val.yaml
+
+python run.py --is_training 0  --model_id UniTS_zeroshot_pretrain_x64_mine_test --model UniTS_zeroshot --prompt_num 10  --patch_len 16 --stride 16  --e_layers 3 --d_model 64   --des 'Exp' --debug online   --project_name zeroshot_newdata_mine_test  --pretrained_weight auto  --task_data_config_path data_provider/1/zeroshot_task.yaml
