@@ -671,7 +671,17 @@ class Exp_All_Task(object):
         preds = np.array(preds)
         trues = np.array(trues)
         preds = preds.reshape(-1, preds.shape[-2], preds.shape[-1])
-        trues = trues.reshape(-1, trues.shape[-2], trues.shape[-1])
+        trues = trues.reshape(-1, trues.shape[-2], trues.shape[-1]) 
+
+        if not os.path.isdir("results"):
+            os.makedirs("results")    
+        import pickle
+        with open("results/preds_" + data_task_name + "_" + str(task_id), 'wb') as file_object:
+            pickle.dump(preds, file_object) 
+            file_object.close()
+        with open("results/trues_" + data_task_name + "_" + str(task_id), 'wb') as file_object:
+            pickle.dump(trues, file_object) 
+            file_object.close()
 
         mae, mse, rmse, mape, mspe = metric(preds, trues)
         print('data_task_name: {} mse:{}, mae:{}'.format(
