@@ -563,6 +563,7 @@ class Exp_All_Task(object):
         avg_imputation_mae = []
         avg_anomaly_f_score = []
         for task_id, (test_data, test_loader) in enumerate(zip(test_data_list, test_loader_list)):
+            print(test_data_list, test_loader_list)
             task_name = self.task_data_config_list[task_id][1]['task_name']
             data_task_name = self.task_data_config_list[task_id][0]
             if task_name == 'long_term_forecast':
