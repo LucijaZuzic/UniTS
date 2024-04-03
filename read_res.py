@@ -86,8 +86,8 @@ for num in range(2, 7):
         
         print(len(pd_file_train["OT"]), np.shape(trues_train)[0], np.shape(trues_all_train)[0])
         print(len(pd_file_val["OT"]), np.shape(trues_val)[0], np.shape(trues_all_val)[0])
-        print(len(pd_file_test["OT"]), np.shape(trues_test)[0])
-        break
+        print(len(pd_file_test["OT"]), np.shape(trues_test)[0], np.shape(trues_all_test)[0])
+        
         #for ix1 in range(len(pd_file_test["OT"])):
         for ix1 in range(num * 10 * num):
             pd_test_row = []
