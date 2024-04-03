@@ -563,7 +563,6 @@ class Exp_All_Task(object):
         avg_imputation_mae = []
         avg_anomaly_f_score = []
         for task_id, (test_data, test_loader) in enumerate(zip(test_data_list, test_loader_list)):
-            print(test_data_list, test_loader_list)
             task_name = self.task_data_config_list[task_id][1]['task_name']
             data_task_name = self.task_data_config_list[task_id][0]
             if task_name == 'long_term_forecast':
@@ -633,6 +632,8 @@ class Exp_All_Task(object):
 
         preds = []
         trues = []
+        preds_transformed = []
+        trues_transformed = []
 
         self.model.eval()
         with torch.no_grad():
@@ -659,6 +660,9 @@ class Exp_All_Task(object):
                     outputs = test_data.inverse_transform(outputs)
                     batch_y = test_data.inverse_transform(batch_y)
 
+                preds_transformed.append(test_data.inverse_transform(outputs[0]))
+                trues_transformed.append(test_data.inverse_transform(batch_y[0]))
+
                 pred = outputs
                 true = batch_y
 
@@ -674,14 +678,20 @@ class Exp_All_Task(object):
         preds = preds.reshape(-1, preds.shape[-2], preds.shape[-1])
         trues = trues.reshape(-1, trues.shape[-2], trues.shape[-1]) 
 
-        if not os.path.isdir("results"):
-            os.makedirs("results")    
+        if not os.path.isdir("results/" + setting.replace("ALL_task_UniTS_zeroshot_pretrain_x64_mine_", "").replace("_UniTS_zeroshot_All_ftM_dm64_el3_Exp_0", "").replace("train_test", "train")):
+            os.makedirs("results/" + setting.replace("ALL_task_UniTS_zeroshot_pretrain_x64_mine_", "").replace("_UniTS_zeroshot_All_ftM_dm64_el3_Exp_0", "").replace("train_test", "train")) 
         import pickle
-        with open("results/preds_" + data_task_name + "_" + str(task_id), 'wb') as file_object:
+        with open("results/" + setting.replace("ALL_task_UniTS_zeroshot_pretrain_x64_mine_", "").replace("_UniTS_zeroshot_All_ftM_dm64_el3_Exp_0", "").replace("train_test", "train") + "/preds_" + data_task_name, 'wb') as file_object:
             pickle.dump(preds, file_object) 
             file_object.close()
-        with open("results/trues_" + data_task_name + "_" + str(task_id), 'wb') as file_object:
+        with open("results/" + setting.replace("ALL_task_UniTS_zeroshot_pretrain_x64_mine_", "").replace("_UniTS_zeroshot_All_ftM_dm64_el3_Exp_0", "").replace("train_test", "train") + "/trues_" + data_task_name, 'wb') as file_object:
             pickle.dump(trues, file_object) 
+            file_object.close()
+        with open("results/" + setting.replace("ALL_task_UniTS_zeroshot_pretrain_x64_mine_", "").replace("_UniTS_zeroshot_All_ftM_dm64_el3_Exp_0", "").replace("train_test", "train") + "/preds_transformed_" + data_task_name, 'wb') as file_object:
+            pickle.dump(preds_transformed, file_object) 
+            file_object.close()
+        with open("results/" + setting.replace("ALL_task_UniTS_zeroshot_pretrain_x64_mine_", "").replace("_UniTS_zeroshot_All_ftM_dm64_el3_Exp_0", "").replace("train_test", "train") + "/trues_transformed_" + data_task_name, 'wb') as file_object:
+            pickle.dump(trues_transformed, file_object) 
             file_object.close()
 
         mae, mse, rmse, mape, mspe = metric(preds, trues)
