@@ -667,19 +667,26 @@ class Exp_All_Task(object):
                     outputs = test_data.inverse_transform(outputs)
                     batch_y = test_data.inverse_transform(batch_y)
 
-                xs_data = xs_part[0]
-                outputs_data = outputs[0]
-                batch_y_data = batch_y[0]
                 if "MS" in part_model:
-                    while len(xs_data) != len_model:
+                    xs_data = list(xs_part[0])
+                    outputs_data = list(outputs[0])
+                    batch_y_data = list(batch_y[0])
+                    while len(xs_data) != len_model + 1:
                         xs_data.append(xs_data[-1])
-                    while len(outputs_data) != len_model:
+                    while len(outputs_data) != len_model + 1:
                         outputs_data.append(outputs_data[-1])
-                    while len(batch_y_data) != len_model:
+                    while len(batch_y_data) != len_model + 1:
                         batch_y_data.append(batch_y_data[-1])
-                xs_transformed.append(test_data.inverse_transform(xs_data))
-                preds_transformed.append(test_data.inverse_transform(outputs_data))
-                trues_transformed.append(test_data.inverse_transform(batch_y_data))
+                    xs_data = np.array([xs_data])
+                    outputs_data = np.array([outputs_data])
+                    batch_y_data = np.array([batch_y_data])
+                    xs_transformed.append(test_data.inverse_transform(xs_data))
+                    preds_transformed.append(test_data.inverse_transform(outputs_data))
+                    trues_transformed.append(test_data.inverse_transform(batch_y_data))
+                else:
+                    xs_transformed.append(test_data.inverse_transform(xs_part[0]))
+                    preds_transformed.append(test_data.inverse_transform(outputs[0]))
+                    trues_transformed.append(test_data.inverse_transform(batch_y[0]))
 
                 pred = outputs
                 true = batch_y
