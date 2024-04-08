@@ -638,6 +638,8 @@ class Exp_All_Task(object):
         trues_transformed = []
 
         self.model.eval()
+        part_model = setting.replace("ALL_task_UniTS_zeroshot_pretrain_x64_mine_", "").replace("_UniTS_zeroshot_All_ftM_dm64_el3_Exp_0", "").replace("train_test", "train").split("_")
+        len_model = int(part_model[-2])
         with torch.no_grad():
             for i, (batch_x, batch_y, _, _) in enumerate(test_loader):
                 batch_x = batch_x.float().to(self.device_id)
@@ -665,9 +667,19 @@ class Exp_All_Task(object):
                     outputs = test_data.inverse_transform(outputs)
                     batch_y = test_data.inverse_transform(batch_y)
 
-                xs_transformed.append(test_data.inverse_transform(xs_part[0]))
-                preds_transformed.append(test_data.inverse_transform(outputs[0]))
-                trues_transformed.append(test_data.inverse_transform(batch_y[0]))
+                xs_data = xs_part[0]
+                outputs_data = outputs[0]
+                batch_y_data = batch_y[0]
+                if "MS" in part_model:
+                    while len(xs_data) != len_model:
+                        xs_data.append(xs_data[-1])
+                    while len(outputs_data) != len_model:
+                        outputs_data.append(outputs_data[-1])
+                    while len(batch_y_data) != len_model:
+                        batch_y_data.append(batch_y_data[-1])
+                xs_transformed.append(test_data.inverse_transform(xs_data))
+                preds_transformed.append(test_data.inverse_transform(outputs_data))
+                trues_transformed.append(test_data.inverse_transform(batch_y_data))
 
                 pred = outputs
                 true = batch_y
