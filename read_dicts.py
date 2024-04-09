@@ -102,6 +102,7 @@ def find_match_X(transformed_pd_file, transformed_xs_file, transformed_true_file
         max_error = abs(candidates[ix_choose_max][0] - candidates[ix_choose_max][1])
         if "S" not in suf1:
             min_error = sum(min_error)
+            max_error = sum(max_error)
         for ix_c in range(len(candidates)):
             new_error = abs(candidates[ix_choose][0] - candidates[ix_choose][1])
             if "S" not in suf1:
@@ -234,6 +235,7 @@ def find_match_Y(transformed_pd_file, transformed_true_file, transformed_pred_fi
         max_error = abs(candidates[ix_choose_max] - dict_xs_pred_key)
         if "S" not in suf1:
             min_error = sum(min_error)
+            max_error = sum(max_error)
         for ix_c in range(len(candidates)):
             new_error = abs(candidates[ix_c] - dict_xs_pred_key)
             if "S" not in suf1:
@@ -247,7 +249,7 @@ def find_match_Y(transformed_pd_file, transformed_true_file, transformed_pred_fi
         newtrue.append(dict_xs_pred_key)
         newpred.append(candidates[ix_choose])
         newtruemax.append(dict_xs_pred_key)
-        newpredmax.append(candidates[ix_choose_max][1])
+        newpredmax.append(candidates[ix_choose_max])
         used_all.append(dict_xs_pred_key)
         candidates_all.append(candidates)
     
@@ -282,7 +284,7 @@ def find_match_Y(transformed_pd_file, transformed_true_file, transformed_pred_fi
         file_object.close()
     
 varnames = ["direction", "speed", "time", "longitude_no_abs", "latitude_no_abs"]
-first_sufix = ["", "S_", "MS_"]
+first_sufix = ["S_", "MS_"]
 second_sufix = ["", "all_"]
 types_used = ["train", "val", "test"]
 
