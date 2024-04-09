@@ -235,7 +235,7 @@ varnames = ["direction", "speed", "time", "longitude_no_abs", "latitude_no_abs"]
 first_sufix = ["", "S_", "MS_"]
 second_sufix = ["", "all_"]
 types_used = ["train", "val", "test"]
-first_sufix = ["S_", "MS_"]
+first_sufix = [""]
 
 for num in range(2, 7): 
 
