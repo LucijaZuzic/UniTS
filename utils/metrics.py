@@ -40,3 +40,11 @@ def metric(pred, true):
     mspe = MSPE(pred, true)
 
     return mae, mse, rmse, mape, mspe
+
+
+def metric_short(pred, true):
+    mae = MAE(pred, true)
+    mse = MSE(pred, true)
+    rmse = RMSE(pred, true)
+
+    return mae, mse, rmse
