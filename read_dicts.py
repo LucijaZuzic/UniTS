@@ -15,7 +15,7 @@ def transform_np_file(np_file):
     np_file = np.array(np_file).squeeze()
     return np_file
 
-def find_match_X(transformed_pd_file, transformed_xs_file, transformed_true_file, transformed_pred_file, var_name, suf1):
+def find_match_X(transformed_pd_file, transformed_xs_file, transformed_true_file, transformed_pred_file, var_name, suf1, suf2, t_val, num_val):
     print("X", var_name, suf1)
     dict_xs_pred_true = dict()
     use_ndec = 5
@@ -112,8 +112,19 @@ def find_match_X(transformed_pd_file, transformed_xs_file, transformed_true_file
     newpred, newtrue = np.array(newpred), np.array(newtrue)
     mae, mse, rmse = metric_short(newpred, newtrue)
     print(mae, mse, rmse)
+    if not os.path.isdir("results_eval/" + varname + "/" + suf1 + suf2 + str(num_val) + "_" + t_val + "/X/"):
+        os.makedirs("results_eval/" + varname + "/" + suf1 + suf2 + str(num_val) + "_" + t_val + "/X/")
+    with open("results_eval/" + varname + "/" + suf1 + suf2 + str(num_val) + "_" + t_val + "/X/pred_X_" + suf1 + suf2 + str(num_val) + "_" + t_val, 'wb') as file_object:
+        pickle.dump(newpred, file_object)  
+        file_object.close()
+    with open("results_eval/" + varname + "/" + suf1 + suf2 + str(num_val) + "_" + t_val + "/X/true_X_" + suf1 + suf2 + str(num_val) + "_" + t_val, 'wb') as file_object:
+        pickle.dump(newtrue, file_object)  
+        file_object.close()
+    with open("results_eval/" + varname + "/" + suf1 + suf2 + str(num_val) + "_" + t_val + "/X/dict_X_" + suf1 + suf2 + str(num_val) + "_" + t_val, 'wb') as file_object:
+        pickle.dump(dict_xs_pred_true, file_object)  
+        file_object.close()
 
-def find_match_Y(transformed_pd_file, transformed_true_file, transformed_pred_file, var_name, suf1):
+def find_match_Y(transformed_pd_file, transformed_true_file, transformed_pred_file, var_name, suf1, suf2, t_val, num_val):
     print("Y", var_name, suf1)
     dict_xs_pred_true = dict()
     use_ndec = 5
@@ -208,6 +219,17 @@ def find_match_Y(transformed_pd_file, transformed_true_file, transformed_pred_fi
     newpred, newtrue = np.array(newpred), np.array(newtrue)
     mae, mse, rmse = metric_short(newpred, newtrue)
     print(mae, mse, rmse)
+    if not os.path.isdir("results_eval/" + varname + "/" + suf1 + suf2 + str(num_val) + "_" + t_val + "/Y/"):
+        os.makedirs("results_eval/" + varname + "/" + suf1 + suf2 + str(num_val) + "_" + t_val + "/Y/")
+    with open("results_eval/" + varname + "/" + suf1 + suf2 + str(num_val) + "_" + t_val + "/Y/pred_Y_" + suf1 + suf2 + str(num_val) + "_" + t_val, 'wb') as file_object:
+        pickle.dump(newpred, file_object)  
+        file_object.close()
+    with open("results_eval/" + varname + "/" + suf1 + suf2 + str(num_val) + "_" + t_val + "/Y/true_Y_" + suf1 + suf2 + str(num_val) + "_" + t_val, 'wb') as file_object:
+        pickle.dump(newtrue, file_object)  
+        file_object.close()
+    with open("results_eval/" + varname + "/" + suf1 + suf2 + str(num_val) + "_" + t_val + "/Y/dict_Y_" + suf1 + suf2 + str(num_val) + "_" + t_val, 'wb') as file_object:
+        pickle.dump(dict_xs_pred_true, file_object)  
+        file_object.close()
     
 varnames = ["direction", "speed", "time", "longitude_no_abs", "latitude_no_abs"]
 first_sufix = ["", "S_", "MS_"]
@@ -244,5 +266,5 @@ for num in range(2, 7):
                         file_object.close()
                     preds_val = transform_np_file(preds_val)
 
-                    #find_match_X(pd_file_val_transformed, xs_val, trues_val, preds_val, varname, s1)
-                    find_match_Y(pd_file_val_transformed, trues_val, preds_val, varname, s1)
+                    #find_match_X(pd_file_val_transformed, xs_val, trues_val, preds_val, varname, s1, s2, t, num)
+                    find_match_Y(pd_file_val_transformed, trues_val, preds_val, varname, s1, s2, t, num)
