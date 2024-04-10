@@ -4,113 +4,145 @@ speed ('speed', 2, 'S_', '', 'val') 0.10200367017425827
 time ('time', 5, 'MS_', '', 'val') 0.10314973332194842
 longitude_no_abs ('longitude_no_abs', 2, 'S_', '', 'val') 0.000667516107348856
 latitude_no_abs ('latitude_no_abs', 3, 'MS_', '', 'val') 0.0009547706564096328
-direction 12.187583921299648 0.9150802753214785 313.7258429653276
-speed 0.7038354313894022 0.9965362565789494 11.624190674037813
-time 0.1595060528540588 -23.634286286376806 3.010466904377777
-longitude_no_abs 2.9943923830343545e-05 0.9860759432881897 0.0008884684961873549
-latitude_no_abs 2.2438341175602392e-05 0.9839495279293626 0.0007156685214680593
+direction 12.187583921299648 91.51 138.21
+speed 0.7038354313894022 99.65 11.13
+time 0.1595060528540588 -2363.43 11.55
+longitude_no_abs 2.9943923830343545e-05 98.61 0.09
+latitude_no_abs 2.2438341175602392e-05 98.39 0.07
 PS C:\Users\lzuzi\Documents\GitHub\UniTS> & C:/Users/lzuzi/anaconda3/python.exe c:/Users/lzuzi/Documents/GitHub/UniTS/UNITS_dist_traj.py
 trapz x UNITS long no abs 0.9188406638692612
 trapz x UNITS long speed dir 3.977951096949954
 trapz x UNITS long speed ones dir 4.0582765319943865
+trapz x GRU_Att long no abs 0.9633028160000094
+trapz x GRU_Att long speed dir 4.753760177069007
+trapz x GRU_Att long speed ones dir 4.462960876789256
 trapz y UNITS long no abs 0.038341087460743495
 trapz y UNITS long speed dir 0.09895575645223076
 trapz y UNITS long speed ones dir 0.09970492138971565
+trapz y GRU_Att long no abs 0.3645507317500001
+trapz y GRU_Att long speed dir 0.3332694560938627
+trapz y GRU_Att long speed ones dir 0.3606585124521553
 euclidean UNITS long no abs 0.0018412231589835838
 euclidean UNITS long speed dir 0.008080509841364492
 euclidean UNITS long speed ones dir 0.008350763731627605
-trapz x {'UNITS_long no abs': 112, 'UNITS_long speed ones dir': 10, 'UNITS_long speed dir': 8}
-UNITS_long no abs 86.15
-UNITS_long speed ones dir 7.69
-UNITS_long speed dir 6.15
-trapz y {'UNITS_long no abs': 85, 'UNITS_long speed dir': 19, 'UNITS_long speed ones dir': 26}
-UNITS_long no abs 65.38
+euclidean GRU_Att long no abs 0.0007742646701461395
+euclidean GRU_Att long speed dir 0.007601227681558777
+euclidean GRU_Att long speed ones dir 0.0063525880765531685
+trapz x {'UNITS_long no abs': 64, 'GRU_Att_long no abs': 51, 'UNITS_long speed dir': 7, 'UNITS_long speed ones dir': 7, 'GRU_Att_long speed ones dir': 1}
+UNITS_long no abs 49.23
+GRU_Att_long no abs 39.23
+UNITS_long speed dir 5.38
+UNITS_long speed ones dir 5.38
+GRU_Att_long speed ones dir 0.77
+trapz y {'UNITS_long no abs': 79, 'UNITS_long speed dir': 19, 'UNITS_long speed ones dir': 26, 'GRU_Att_long speed ones dir': 2, 'GRU_Att_long speed dir': 2, 'GRU_Att_long no abs': 2}
+UNITS_long no abs 60.77
 UNITS_long speed dir 14.62
 UNITS_long speed ones dir 20.0
-euclidean {'UNITS_long no abs': 129, 'UNITS_long speed ones dir': 1}
-UNITS_long no abs 99.23
-UNITS_long speed ones dir 0.77
-trapz x {'GRU_Att_long no abs': 129, 'GRU_Att_long speed ones dir': 1}
-GRU_Att_long no abs 99.23
-GRU_Att_long speed ones dir 0.77
-trapz y {'GRU_Att_long no abs': 125, 'GRU_Att_long speed ones dir': 5}
-GRU_Att_long no abs 96.15
-GRU_Att_long speed ones dir 3.85
-euclidean {'GRU_Att_long no abs': 127, 'GRU_Att_long speed ones dir': 2, 'GRU_Att_long speed dir': 1}
-GRU_Att_long no abs 97.69
 GRU_Att_long speed ones dir 1.54
-GRU_Att_long speed dir 0.77
-trapz x {'GRU_Att_long no abs': 72, 'Markov_long no abs-lat no abs': 45, 'Markov_long speed ones dir-lat speed ones dir': 6, 'Markov_long speed dir-lat speed dir': 6, 'GRU_Att_long speed ones dir': 1}
-GRU_Att_long no abs 55.38
-Markov_long no abs-lat no abs 34.62
+GRU_Att_long speed dir 1.54
+GRU_Att_long no abs 1.54
+euclidean {'GRU_Att_long no abs': 100, 'UNITS_long no abs': 30}
+GRU_Att_long no abs 76.92
+UNITS_long no abs 23.08
+trapz x {'UNITS_long no abs': 42, 'GRU_Att_long no abs': 43, 'Markov_long no abs-lat no abs': 25, 'UNITS_long speed dir': 6, 'UNITS_long speed ones dir': 6, 'Markov_long speed ones dir-lat speed ones dir': 4, 'Markov_long speed dir-lat speed dir': 3, 'GRU_Att_long speed ones dir': 1}
+UNITS_long no abs 32.31
+GRU_Att_long no abs 33.08
+Markov_long no abs-lat no abs 19.23
+UNITS_long speed dir 4.62
+UNITS_long speed ones dir 4.62
+Markov_long speed ones dir-lat speed ones dir 3.08
+Markov_long speed dir-lat speed dir 2.31
+GRU_Att_long speed ones dir 0.77
+trapz y {'UNITS_long no abs': 68, 'UNITS_long speed dir': 19, 'Markov_long speed ones dir-lat speed ones dir': 6, 'Markov_long no abs-lat no abs': 3, 'UNITS_long speed ones dir': 25, 'GRU_Att_long speed ones dir': 2, 'Markov_long speed dir-lat speed dir': 3, 'GRU_Att_long speed dir': 2, 'GRU_Att_long no abs': 2}
+UNITS_long no abs 52.31
+UNITS_long speed dir 14.62
 Markov_long speed ones dir-lat speed ones dir 4.62
-Markov_long speed dir-lat speed dir 4.62
-GRU_Att_long speed ones dir 0.77
-trapz y {'GRU_Att_long no abs': 63, 'Markov_long no abs-lat no abs': 20, 'Markov_long speed ones dir-lat speed ones dir': 30, 'Markov_long speed dir-lat speed dir': 12, 'GRU_Att_long speed ones dir': 5}
-GRU_Att_long no abs 48.46
-Markov_long no abs-lat no abs 15.38
-Markov_long speed ones dir-lat speed ones dir 23.08
-Markov_long speed dir-lat speed dir 9.23
-GRU_Att_long speed ones dir 3.85
-euclidean {'GRU_Att_long no abs': 122, 'GRU_Att_long speed ones dir': 2, 'Markov_long no abs-lat no abs': 5, 'GRU_Att_long speed dir': 1}
-GRU_Att_long no abs 93.85
+Markov_long no abs-lat no abs 2.31
+UNITS_long speed ones dir 19.23
 GRU_Att_long speed ones dir 1.54
-Markov_long no abs-lat no abs 3.85
-GRU_Att_long speed dir 0.77
-trapz x {'GRU_Att_long no abs': 57, 'RNN_long speed dir': 2, 'Markov_long no abs-lat no abs': 35, 'LSTM_long speed dir': 6, 'GRU_long speed ones dir': 8, 'Markov_long speed ones dir-lat speed ones dir': 6, 'RNN_long speed ones dir': 1, 'GRU_long speed dir': 8, 'Markov_long speed dir-lat speed dir': 5, 'GRU_Att_long speed ones dir': 1, 'LSTM_long speed ones dir': 1}
-GRU_Att_long no abs 43.85
-RNN_long speed dir 1.54
-Markov_long no abs-lat no abs 26.92
+Markov_long speed dir-lat speed dir 2.31
+GRU_Att_long speed dir 1.54
+GRU_Att_long no abs 1.54
+euclidean {'GRU_Att_long no abs': 98, 'UNITS_long no abs': 29, 'Markov_long no abs-lat no abs': 3}
+GRU_Att_long no abs 75.38
+UNITS_long no abs 22.31
+Markov_long no abs-lat no abs 2.31
+trapz x {'UNITS_long no abs': 35, 'RNN_long speed dir': 1, 'GRU_Att_long no abs': 36, 'Markov_long no abs-lat no abs': 23, 'UNITS_long speed dir': 4, 'LSTM_long speed dir': 6, 'UNITS_long speed ones dir': 5, 'Markov_long 
+speed ones dir-lat speed ones dir': 4, 'Markov_long speed dir-lat speed dir': 3, 'GRU_long speed dir': 5, 'GRU_long speed ones dir': 6, 'GRU_Att_long speed ones dir': 1, 'LSTM_long speed ones dir': 1}
+UNITS_long no abs 26.92
+RNN_long speed dir 0.77
+GRU_Att_long no abs 27.69
+Markov_long no abs-lat no abs 17.69
+UNITS_long speed dir 3.08
 LSTM_long speed dir 4.62
-GRU_long speed ones dir 6.15
-Markov_long speed ones dir-lat speed ones dir 4.62
-RNN_long speed ones dir 0.77
-GRU_long speed dir 6.15
-Markov_long speed dir-lat speed dir 3.85
+UNITS_long speed ones dir 3.85
+Markov_long speed ones dir-lat speed ones dir 3.08
+Markov_long speed dir-lat speed dir 2.31
+GRU_long speed dir 3.85
+GRU_long speed ones dir 4.62
 GRU_Att_long speed ones dir 0.77
 LSTM_long speed ones dir 0.77
-trapz y {'GRU_long no abs': 20, 'LSTM_long no abs': 29, 'RNN_long no abs': 8, 'Markov_long speed ones dir-lat speed ones dir': 5, 'GRU_long speed ones dir': 6, 'Markov_long no abs-lat no abs': 3, 'GRU_long speed dir': 8, 'RNN_long speed dir': 14, 'RNN_long speed ones dir': 8, 'LSTM_long speed dir': 8, 'GRU_Att_long no abs': 12, 'LSTM_long speed ones dir': 3, 'GRU_Att_long speed ones dir': 4, 'Markov_long speed dir-lat speed dir': 2}
-GRU_long no abs 15.38
-LSTM_long no abs 22.31
-RNN_long no abs 6.15
-Markov_long speed ones dir-lat speed ones dir 3.85
-GRU_long speed ones dir 4.62
-Markov_long no abs-lat no abs 2.31
-GRU_long speed dir 6.15
-RNN_long speed dir 10.77
-RNN_long speed ones dir 6.15
-LSTM_long speed dir 6.15
-GRU_Att_long no abs 9.23
-LSTM_long speed ones dir 2.31
-GRU_Att_long speed ones dir 3.08
-Markov_long speed dir-lat speed dir 1.54
-euclidean {'GRU_Att_long no abs': 121, 'GRU_Att_long speed ones dir': 2, 'Markov_long no abs-lat no abs': 5, 'GRU_long speed ones dir': 1, 'GRU_Att_long speed dir': 1}
-GRU_Att_long no abs 93.08
+trapz y {'UNITS_long no abs': 34, 'UNITS_long speed dir': 12, 'LSTM_long no abs': 21, 'RNN_long no abs': 5, 'GRU_long no abs': 7, 'Markov_long speed ones dir-lat speed ones dir': 3, 'GRU_long speed ones dir': 5, 'Markov_long no abs-lat no abs': 2, 'GRU_long speed dir': 6, 'RNN_long speed dir': 7, 'RNN_long speed ones dir': 6, 'UNITS_long speed ones dir': 9, 'LSTM_long speed dir': 5, 'GRU_Att_long speed ones dir': 2, 'Markov_long speed dir-lat speed dir': 2, 'GRU_Att_long speed dir': 2, 'GRU_Att_long no abs': 2}
+UNITS_long no abs 26.15
+UNITS_long speed dir 9.23
+LSTM_long no abs 16.15
+RNN_long no abs 3.85
+GRU_long no abs 5.38
+Markov_long speed ones dir-lat speed ones dir 2.31
+GRU_long speed ones dir 3.85
+Markov_long no abs-lat no abs 1.54
+GRU_long speed dir 4.62
+RNN_long speed dir 5.38
+RNN_long speed ones dir 4.62
+UNITS_long speed ones dir 6.92
+LSTM_long speed dir 3.85
 GRU_Att_long speed ones dir 1.54
-Markov_long no abs-lat no abs 3.85
-GRU_long speed ones dir 0.77
-GRU_Att_long speed dir 0.77
+Markov_long speed dir-lat speed dir 1.54
+GRU_Att_long speed dir 1.54
+GRU_Att_long no abs 1.54
+euclidean {'GRU_Att_long no abs': 98, 'UNITS_long no abs': 29, 'Markov_long no abs-lat no abs': 3}
+GRU_Att_long no abs 75.38
+UNITS_long no abs 22.31
+Markov_long no abs-lat no abs 2.31
 best trapz x UNITS long no abs Vehicle_17/cleaned_csv/events_8577509.csv 0.0018203181861181778
 worst trapz x UNITS long no abs Vehicle_10/cleaned_csv/events_8601407.csv 17.04195874238053
 best trapz x UNITS long speed dir Vehicle_17/cleaned_csv/events_8577509.csv 0.0025103220925879466
 worst trapz x UNITS long speed dir Vehicle_16/cleaned_csv/events_8565150.csv 107.4388226784605
 best trapz x UNITS long speed ones dir Vehicle_16/cleaned_csv/events_8442479.csv 0.001994146417327869
 worst trapz x UNITS long speed ones dir Vehicle_16/cleaned_csv/events_8565150.csv 110.57427559935257
+best trapz x GRU_Att long no abs Vehicle_6/cleaned_csv/events_9476572.csv 0.0014483059999996217
+worst trapz x GRU_Att long no abs Vehicle_16/cleaned_csv/events_8565150.csv 28.466411101002336
+best trapz x GRU_Att long speed dir Vehicle_17/cleaned_csv/events_8577509.csv 0.011037256495270584
+worst trapz x GRU_Att long speed dir Vehicle_16/cleaned_csv/events_8565150.csv 127.49195221236175
+best trapz x GRU_Att long speed ones dir Vehicle_17/cleaned_csv/events_8577509.csv 0.00364102600331756
+worst trapz x GRU_Att long speed ones dir Vehicle_16/cleaned_csv/events_8565150.csv 108.11198648091204
 best trapz y UNITS long no abs Vehicle_17/cleaned_csv/events_8500643.csv 8.382342996139658e-06
 worst trapz y UNITS long no abs Vehicle_16/cleaned_csv/events_8965175.csv 1.314813847891287
 best trapz y UNITS long speed dir Vehicle_17/cleaned_csv/events_8500643.csv 5.769502691944234e-05
 worst trapz y UNITS long speed dir Vehicle_9/cleaned_csv/events_9150982.csv 12.83815469774322
 best trapz y UNITS long speed ones dir Vehicle_9/cleaned_csv/events_8965040.csv 3.355087946055324e-05
 worst trapz y UNITS long speed ones dir Vehicle_9/cleaned_csv/events_9150982.csv 12.866602858376382
+best trapz y GRU_Att long no abs Vehicle_6/cleaned_csv/events_9476572.csv 1.483500000000644e-06
+worst trapz y GRU_Att long no abs Vehicle_16/cleaned_csv/events_8565150.csv 15.174093135500726
+best trapz y GRU_Att long speed dir Vehicle_6/cleaned_csv/events_9476572.csv 3.923218184832648e-05
+worst trapz y GRU_Att long speed dir Vehicle_16/cleaned_csv/events_8565150.csv 13.455825188971062
+best trapz y GRU_Att long speed ones dir Vehicle_6/cleaned_csv/events_9476572.csv 3.899319254173535e-05
+worst trapz y GRU_Att long speed ones dir Vehicle_16/cleaned_csv/events_8565150.csv 14.830888353407147
 best euclidean UNITS long no abs Vehicle_2/cleaned_csv/events_9574020.csv 3.2807444596596e-05
 worst euclidean UNITS long no abs Vehicle_10/cleaned_csv/events_8601407.csv 0.01665355033138867
 best euclidean UNITS long speed dir Vehicle_17/cleaned_csv/events_8577509.csv 0.00021658258325556138
 worst euclidean UNITS long speed dir Vehicle_16/cleaned_csv/events_9547451.csv 0.06434463073276767
 best euclidean UNITS long speed ones dir Vehicle_2/cleaned_csv/events_9574020.csv 0.00029667920952717577
 worst euclidean UNITS long speed ones dir Vehicle_16/cleaned_csv/events_8565150.csv 0.06524503695346302
-8
-7
-15
+best euclidean GRU_Att long no abs Vehicle_2/cleaned_csv/events_9574020.csv 0.00010063749999999988
+worst euclidean GRU_Att long no abs Vehicle_10/cleaned_csv/events_8601407.csv 0.008662965333333467
+best euclidean GRU_Att long speed dir Vehicle_2/cleaned_csv/events_9574020.csv 0.00029621427140817723
+worst euclidean GRU_Att long speed dir Vehicle_16/cleaned_csv/events_8565150.csv 0.06739168623831247
+best euclidean GRU_Att long speed ones dir Vehicle_2/cleaned_csv/events_9574020.csv 0.00027030883698881785
+worst euclidean GRU_Att long speed ones dir Vehicle_16/cleaned_csv/events_8565150.csv 0.054200466861116875
+16
+11
+27
 UNITS long no abs
 best
 Mosaic_RNN_part/Vehicle_17_events_8500643_UNITS_long no abs_lat no abs_test_mosaic.png
@@ -135,6 +167,27 @@ Mosaic_RNN_part/Vehicle_9_events_8965040_UNITS_long speed ones dir_lat speed one
 worst
 Mosaic_RNN_part/Vehicle_16_events_8565150_UNITS_long speed ones dir_lat speed ones dir_test_mosaic.png
 Mosaic_RNN_part/Vehicle_9_events_9150982_UNITS_long speed ones dir_lat speed ones dir_test_mosaic.png
+GRU_Att long no abs
+best
+Mosaic_RNN_part/Vehicle_2_events_9574020_GRU_Att_long no abs_lat no abs_test_mosaic.png
+Mosaic_RNN_part/Vehicle_6_events_9476572_GRU_Att_long no abs_lat no abs_test_mosaic.png
+worst
+Mosaic_RNN_part/Vehicle_10_events_8601407_GRU_Att_long no abs_lat no abs_test_mosaic.png
+Mosaic_RNN_part/Vehicle_16_events_8565150_GRU_Att_long no abs_lat no abs_test_mosaic.png
+GRU_Att long speed dir
+best
+Mosaic_RNN_part/Vehicle_17_events_8577509_GRU_Att_long speed dir_lat speed dir_test_mosaic.png
+Mosaic_RNN_part/Vehicle_2_events_9574020_GRU_Att_long speed dir_lat speed dir_test_mosaic.png
+Mosaic_RNN_part/Vehicle_6_events_9476572_GRU_Att_long speed dir_lat speed dir_test_mosaic.png
+worst
+Mosaic_RNN_part/Vehicle_16_events_8565150_GRU_Att_long speed dir_lat speed dir_test_mosaic.png
+GRU_Att long speed ones dir
+best
+Mosaic_RNN_part/Vehicle_17_events_8577509_GRU_Att_long speed ones dir_lat speed ones dir_test_mosaic.png
+Mosaic_RNN_part/Vehicle_2_events_9574020_GRU_Att_long speed ones dir_lat speed ones dir_test_mosaic.png
+Mosaic_RNN_part/Vehicle_6_events_9476572_GRU_Att_long speed ones dir_lat speed ones dir_test_mosaic.png
+worst
+Mosaic_RNN_part/Vehicle_16_events_8565150_GRU_Att_long speed ones dir_lat speed ones dir_test_mosaic.png
 PS C:\Users\lzuzi\Documents\GitHub\UniTS> & C:/Users/lzuzi/anaconda3/python.exe c:/Users/lzuzi/Documents/GitHub/UniTS/UNITS_dist_traj_MAE.py
 mean_absolute_error_time
 UNITS & $4.712013$ \\ \hline

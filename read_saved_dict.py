@@ -89,6 +89,15 @@ y_test_all = dict()
 ws_all = dict()
 model_name = "UNITS"
 for varname in chose_vals:
+
+    with open("actual/actual_" + varname, 'rb') as file_object:
+        file_object_test = pickle.load(file_object)
+
+    all_mine_flat = []
+    for filename in file_object_test: 
+        for val in file_object_test[filename]:
+            all_mine_flat.append(val)
+
     predicted_all[varname] = dict()
     predicted_all[varname][model_name] = dict()
     y_test_all[varname] = dict()
@@ -131,7 +140,7 @@ for varname in chose_vals:
     final_train_MAE = mean_absolute_error(preds_val, pd_file_val_transformed)
     final_train_R2 = r2_score(preds_val, pd_file_val_transformed)
     final_train_RMSE = math.sqrt(mean_squared_error(preds_val, pd_file_val_transformed) / (max(all_mine_flat) - min(all_mine_flat)))
-    print(varname, final_train_MAE, final_train_R2, final_train_RMSE)
+    print(varname, final_train_MAE, np.round(final_train_R2 * 100, 2), np.round(final_train_RMSE * 100, 2))
     
 if not os.path.isdir("UNITS_result/"):
     os.makedirs("UNITS_result/")

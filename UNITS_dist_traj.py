@@ -62,7 +62,8 @@ def draw_mosaic(rides_actual, rides_predicted, name):
     
         plt.plot(x_actual, y_actual, c = "k", linewidth = 2, label = "Original")
 
-    plt.savefig(name, bbox_inches = "tight")
+    if "GRU" not in name:
+        plt.savefig(name, bbox_inches = "tight")
     plt.close()
     
 def draw_mosaic_one(x_actual, y_actual, x_predicted, y_predicted, k, model_name, name, dist_name):
@@ -91,9 +92,10 @@ def draw_mosaic_one(x_actual, y_actual, x_predicted, y_predicted, k, model_name,
             continue
         title_new += new_metric_translate(metric) + ": " + str_convert_new(distance_predicted_new[metric][model_name][dist_name][k]) + "\n"
     
-    plt.title(title_new.replace("UNITS", "UniTS"))
+    plt.title(title_new.replace("UNITS", "UniTS").replace("GRU_Att", "GRU Attention"))
     plt.legend()
-    plt.savefig(name, bbox_inches = "tight")
+    if "GRU" not in name:
+        plt.savefig(name, bbox_inches = "tight")
     plt.close()
 
 predicted_all = load_object("UNITS_result/predicted_all")
@@ -159,6 +161,69 @@ if not os.path.isdir("UNITS_result"):
 
 save_object("UNITS_result/distance_predicted_new", distance_predicted_new)
  
+predicted_all_2 = load_object("attention_result/predicted_all")
+y_test_all_2 = load_object("attention_result/y_test_all")
+ws_all_2 = load_object("attention_result/ws_all")
+
+actual_long_2 = load_object("attention_result/actual_long")
+actual_lat_2 = load_object("attention_result/actual_lat")
+predicted_long_2 = load_object("attention_result/predicted_long")
+predicted_lat_2 = load_object("attention_result/predicted_lat")
+
+for mn in actual_long_2:
+    for varname in predicted_all:
+        predicted_all[varname][mn] = predicted_all_2[varname][mn]
+        y_test_all[varname][mn] = y_test_all_2[varname][mn]
+        ws_all[varname][mn] = ws_all_2[varname][mn]
+    actual_long[mn] = actual_long_2[mn]
+    actual_lat[mn] = actual_lat_2[mn]
+    predicted_long[mn] = predicted_long_2[mn]
+    predicted_lat[mn] = predicted_lat_2[mn]
+
+for metric in metric_names: 
+    for model_name in predicted_long:
+        distance_predicted_new[metric][model_name] = dict()
+        for dist_name in predicted_long[model_name]:
+            distance_predicted_new[metric][model_name][dist_name] = dict()
+            for k in predicted_long[model_name][dist_name]:
+
+                actual_long_one = actual_long[model_name][k]
+                actual_lat_one = actual_lat[model_name][k]
+
+                predicted_long_one = predicted_long[model_name][dist_name][k]
+                predicted_lat_one = predicted_lat[model_name][dist_name.replace("long", "lat")][k]
+
+                use_len = min(len(actual_long_one), len(predicted_long_one))
+                
+                actual_long_one = actual_long_one[:use_len]
+                actual_lat_one = actual_lat_one[:use_len]
+
+                predicted_long_one = predicted_long_one[:use_len]
+                predicted_lat_one = predicted_lat_one[:use_len]
+                   
+                time_actual = y_test_all["time"][model_name][k]
+                time_predicted = predicted_all["time"][model_name][k]
+
+                time_actual_cumulative = [0]
+                time_predicted_cumulative = [0]
+                
+                for ix in range(len(time_actual)):
+                    time_actual_cumulative.append(time_actual_cumulative[-1] + time_actual[ix])
+                    time_predicted_cumulative.append(time_predicted_cumulative[-1] + time_predicted[ix])
+                    
+                use_len_time = min(use_len, len(time_actual_cumulative))
+
+                actual_long_one = actual_long_one[:use_len_time]
+                actual_lat_one = actual_lat_one[:use_len_time]
+
+                predicted_long_one = predicted_long_one[:use_len_time]
+                predicted_lat_one = predicted_lat_one[:use_len_time]
+                
+                time_actual_cumulative = time_actual_cumulative[:use_len_time]
+                time_predicted_cumulative = time_predicted_cumulative[:use_len_time]
+
+                distance_predicted_new[metric][model_name][dist_name][k] = compare_traj_and_sample(actual_long_one, predicted_lat_one, time_actual_cumulative, {"long": predicted_long_one, "lat": predicted_lat_one, "time": time_predicted_cumulative}, metric)
+
 for metric in distance_predicted_new:
     for model_name in distance_predicted_new[metric]:
         for dist_name in distance_predicted_new[metric][model_name]:
@@ -168,8 +233,8 @@ for metric in distance_predicted_new:
 choose_best = dict()
 for metric in metric_names:
     choose_best[metric] = dict()
-    for name in list(distance_predicted_new["euclidean"]["UNITS"]["long no abs"].keys()):
-        choose_best[metric][name] = ("UNITS", "long no abs", distance_predicted_new[metric]["UNITS"]["long no abs"][name])
+    for name in list(distance_predicted_new["euclidean"]["GRU_Att"]["long no abs"].keys()):
+        choose_best[metric][name] = ("GRU_Att", "long no abs", distance_predicted_new[metric]["GRU_Att"]["long no abs"][name])
         for model_name in distance_predicted_new[metric]:
             for dist_name in distance_predicted_new[metric][model_name]:
                 if distance_predicted_new[metric][model_name][dist_name][name] < choose_best[metric][name][2]:
@@ -185,34 +250,6 @@ for metric in choose_best:
     print(metric, count_best[metric])
     for method in count_best[metric]:
         print(method, np.round(count_best[metric][method] / np.sum(list(count_best[metric].values())) * 100, 2))
-        
-distance_predicted_new_3 = load_object("attention_result/distance_predicted_new")
-
-choose_best_new_new = dict()
-for metric in choose_best_new_new:
-    choose_best_new_new[metric] = dict()
-    for name in choose_best_new_new[metric]:
-        choose_best_new_new[metric][name] = choose_best[metric][name]
- 
-for metric in metric_names:
-    choose_best_new_new[metric] = dict()
-    for name in list(distance_predicted_new_3["euclidean"]["GRU_Att"]["long no abs"].keys()):
-        choose_best_new_new[metric][name] = ("GRU_Att", "long no abs", distance_predicted_new_3[metric]["GRU_Att"]["long no abs"][name])
-        for model_name in distance_predicted_new_3[metric]:
-            for dist_name in distance_predicted_new_3[metric][model_name]:
-                if distance_predicted_new_3[metric][model_name][dist_name][name] < choose_best[metric][name][2]:
-                    choose_best_new_new[metric][name] = (model_name, dist_name, distance_predicted_new_3[metric][model_name][dist_name][name])
-
-count_best_new_new = dict()
-for metric in choose_best_new_new: 
-    count_best_new_new[metric] = dict()
-    for name in choose_best_new_new[metric]:
-        if choose_best_new_new[metric][name][0] + "_" + choose_best_new_new[metric][name][1] not in count_best_new_new[metric]:
-            count_best_new_new[metric][choose_best_new_new[metric][name][0] + "_" + choose_best_new_new[metric][name][1]] = 0
-        count_best_new_new[metric][choose_best_new_new[metric][name][0] + "_" + choose_best_new_new[metric][name][1]] += 1
-    print(metric, count_best_new_new[metric])
-    for method in count_best_new_new[metric]:
-        print(method, np.round(count_best_new_new[metric][method] / np.sum(list(count_best_new_new[metric].values())) * 100, 2))
 
 distance_predicted = load_object("markov_result/distance_predicted")
 
@@ -220,13 +257,13 @@ choose_best_new = dict()
 for metric in choose_best:
     choose_best_new[metric] = dict()
     for name in choose_best[metric]:
-        choose_best_new[metric][name] = choose_best_new_new[metric][name]
+        choose_best_new[metric][name] = choose_best[metric][name]
 
 for subdir_name in distance_predicted:
     for some_file in distance_predicted[subdir_name]:
         name = subdir_name + "/cleaned_csv/" + some_file
         for metric in choose_best_new:
-            for dist_name_half in distance_predicted_new[metric]["UNITS"]:
+            for dist_name_half in distance_predicted_new[metric]["GRU_Att"]:
                 dist_name = dist_name_half + "-" + dist_name_half.replace("long", "lat")
                 if distance_predicted[subdir_name][some_file][metric][dist_name] < choose_best_new[metric][name][2]:
                     choose_best_new[metric][name] = ("Markov", dist_name, distance_predicted[subdir_name][some_file][metric][dist_name])
