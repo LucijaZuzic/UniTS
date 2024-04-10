@@ -1,182 +1,274 @@
-trapz x UNITS long no abs 0.1444148950000308
-trapz x UNITS long speed dir 3.309138818619463
-trapz x UNITS long speed ones dir 3.281507815456912
-trapz x GRU_Att long no abs 0.9633028160000094
-trapz x GRU_Att long speed dir 4.753760177069007
-trapz x GRU_Att long speed ones dir 4.462960876789256
-trapz y UNITS long no abs 0.04082613999999951
-trapz y UNITS long speed dir 0.04291321027391781
-trapz y UNITS long speed ones dir 0.0417101318733164
-trapz y GRU_Att long no abs 0.3645507317500001
-trapz y GRU_Att long speed dir 0.3332694560938627
-trapz y GRU_Att long speed ones dir 0.3606585124521553
-euclidean UNITS long no abs 0.00013260469219530306
-euclidean UNITS long speed dir 0.006420530784600302
-euclidean UNITS long speed ones dir 0.006355126611850155
-euclidean GRU_Att long no abs 0.0007742646701461395
-euclidean GRU_Att long speed dir 0.007601227681558777
-euclidean GRU_Att long speed ones dir 0.0063525880765531685
-trapz x {'GRU_Att_long no abs': 25, 'UNITS_long no abs': 103, 'UNITS_long speed dir': 1, 'UNITS_long speed ones dir': 1}
-GRU_Att_long no abs 19.23
-UNITS_long no abs 79.23
-UNITS_long speed dir 0.77
+PS C:\Users\lzuzi\Documents\GitHub\UniTS> & C:/Users/lzuzi/anaconda3/python.exe c:/Users/lzuzi/Documents/GitHub/UniTS/read_saved_dict.py
+direction ('direction', 2, 'S_', '', 'val') 1.2619147034387803
+speed ('speed', 2, 'S_', '', 'val') 0.10200367017425827
+time ('time', 5, 'MS_', '', 'val') 0.10314973332194842
+longitude_no_abs ('longitude_no_abs', 2, 'S_', '', 'val') 0.000667516107348856
+latitude_no_abs ('latitude_no_abs', 3, 'MS_', '', 'val') 0.0009547706564096328
+direction 12.187583921299648 0.9150802753214785 313.7258429653276
+speed 0.7038354313894022 0.9965362565789494 11.624190674037813
+time 0.1595060528540588 -23.634286286376806 3.010466904377777
+longitude_no_abs 2.9943923830343545e-05 0.9860759432881897 0.0008884684961873549
+latitude_no_abs 2.2438341175602392e-05 0.9839495279293626 0.0007156685214680593
+PS C:\Users\lzuzi\Documents\GitHub\UniTS> & C:/Users/lzuzi/anaconda3/python.exe c:/Users/lzuzi/Documents/GitHub/UniTS/UNITS_dist_traj.py
+trapz x UNITS long no abs 0.9188406638692612
+trapz x UNITS long speed dir 3.977951096949954
+trapz x UNITS long speed ones dir 4.0582765319943865
+trapz y UNITS long no abs 0.038341087460743495
+trapz y UNITS long speed dir 0.09895575645223076
+trapz y UNITS long speed ones dir 0.09970492138971565
+euclidean UNITS long no abs 0.0018412231589835838
+euclidean UNITS long speed dir 0.008080509841364492
+euclidean UNITS long speed ones dir 0.008350763731627605
+trapz x {'UNITS_long no abs': 112, 'UNITS_long speed ones dir': 10, 'UNITS_long speed dir': 8}
+UNITS_long no abs 86.15
+UNITS_long speed ones dir 7.69
+UNITS_long speed dir 6.15
+trapz y {'UNITS_long no abs': 85, 'UNITS_long speed dir': 19, 'UNITS_long speed ones dir': 26}
+UNITS_long no abs 65.38
+UNITS_long speed dir 14.62
+UNITS_long speed ones dir 20.0
+euclidean {'UNITS_long no abs': 129, 'UNITS_long speed ones dir': 1}
+UNITS_long no abs 99.23
 UNITS_long speed ones dir 0.77
-trapz y {'UNITS_long speed ones dir': 49, 'UNITS_long no abs': 29, 'UNITS_long speed dir': 44, 'GRU_Att_long no abs': 3, 'GRU_Att_long speed ones dir': 2, 'GRU_Att_long speed dir': 3}
-UNITS_long speed ones dir 37.69
-UNITS_long no abs 22.31
-UNITS_long speed dir 33.85
-GRU_Att_long no abs 2.31
+trapz x {'GRU_Att_long no abs': 129, 'GRU_Att_long speed ones dir': 1}
+GRU_Att_long no abs 99.23
+GRU_Att_long speed ones dir 0.77
+trapz y {'GRU_Att_long no abs': 125, 'GRU_Att_long speed ones dir': 5}
+GRU_Att_long no abs 96.15
+GRU_Att_long speed ones dir 3.85
+euclidean {'GRU_Att_long no abs': 127, 'GRU_Att_long speed ones dir': 2, 'GRU_Att_long speed dir': 1}
+GRU_Att_long no abs 97.69
 GRU_Att_long speed ones dir 1.54
-GRU_Att_long speed dir 2.31
-euclidean {'GRU_Att_long no abs': 19, 'UNITS_long no abs': 111}
-GRU_Att_long no abs 14.62
-UNITS_long no abs 85.38
-trapz x {'GRU_Att_long no abs': 23, 'UNITS_long no abs': 99, 'Markov_long speed dir-lat speed dir': 2, 'UNITS_long speed dir': 1, 'Markov_long no abs-lat no abs': 4, 'UNITS_long speed ones dir': 1}
-GRU_Att_long no abs 17.69
-UNITS_long no abs 76.15
-Markov_long speed dir-lat speed dir 1.54
-UNITS_long speed dir 0.77
-Markov_long no abs-lat no abs 3.08
-UNITS_long speed ones dir 0.77
-trapz y {'UNITS_long speed ones dir': 45, 'UNITS_long no abs': 25, 'UNITS_long speed dir': 38, 'Markov_long no abs-lat no abs': 4, 'Markov_long speed ones dir-lat speed ones dir': 6, 'Markov_long speed dir-lat speed dir': 4, 'GRU_Att_long no abs': 3, 'GRU_Att_long speed ones dir': 2, 'GRU_Att_long speed dir': 3}
-UNITS_long speed ones dir 34.62
-UNITS_long no abs 19.23
-UNITS_long speed dir 29.23
-Markov_long no abs-lat no abs 3.08
+GRU_Att_long speed dir 0.77
+trapz x {'GRU_Att_long no abs': 72, 'Markov_long no abs-lat no abs': 45, 'Markov_long speed ones dir-lat speed ones dir': 6, 'Markov_long speed dir-lat speed dir': 6, 'GRU_Att_long speed ones dir': 1}
+GRU_Att_long no abs 55.38
+Markov_long no abs-lat no abs 34.62
 Markov_long speed ones dir-lat speed ones dir 4.62
-Markov_long speed dir-lat speed dir 3.08
-GRU_Att_long no abs 2.31
+Markov_long speed dir-lat speed dir 4.62
+GRU_Att_long speed ones dir 0.77
+trapz y {'GRU_Att_long no abs': 63, 'Markov_long no abs-lat no abs': 20, 'Markov_long speed ones dir-lat speed ones dir': 30, 'Markov_long speed dir-lat speed dir': 12, 'GRU_Att_long speed ones dir': 5}
+GRU_Att_long no abs 48.46
+Markov_long no abs-lat no abs 15.38
+Markov_long speed ones dir-lat speed ones dir 23.08
+Markov_long speed dir-lat speed dir 9.23
+GRU_Att_long speed ones dir 3.85
+euclidean {'GRU_Att_long no abs': 122, 'GRU_Att_long speed ones dir': 2, 'Markov_long no abs-lat no abs': 5, 'GRU_Att_long speed dir': 1}
+GRU_Att_long no abs 93.85
 GRU_Att_long speed ones dir 1.54
-GRU_Att_long speed dir 2.31
-euclidean {'GRU_Att_long no abs': 19, 'UNITS_long no abs': 111}
-GRU_Att_long no abs 14.62
-UNITS_long no abs 85.38
-trapz x {'GRU_Att_long no abs': 21, 'UNITS_long no abs': 95, 'RNN_long speed dir': 1, 'Markov_long speed dir-lat speed dir': 2, 'GRU_long speed ones dir': 1, 'UNITS_long speed dir': 1, 'GRU_long speed dir': 3, 'Markov_long no abs-lat no abs': 4, 'LSTM_long speed dir': 1, 'UNITS_long speed ones dir': 1}
-GRU_Att_long no abs 16.15
-UNITS_long no abs 73.08
-RNN_long speed dir 0.77
-Markov_long speed dir-lat speed dir 1.54
-GRU_long speed ones dir 0.77
-UNITS_long speed dir 0.77
-GRU_long speed dir 2.31
-Markov_long no abs-lat no abs 3.08
-LSTM_long speed dir 0.77
-UNITS_long speed ones dir 0.77
-trapz y {'UNITS_long speed ones dir': 17, 'UNITS_long no abs': 8, 'UNITS_long speed dir': 21, 'LSTM_long no abs': 20, 'RNN_long no abs': 5, 'GRU_long no abs': 9, 'GRU_long speed ones dir': 6, 'Markov_long no abs-lat no abs': 3, 'GRU_long speed dir': 6, 'RNN_long speed dir': 14, 'RNN_long speed ones dir': 6, 'LSTM_long speed dir': 6, 'GRU_Att_long no abs': 2, 'GRU_Att_long speed ones dir': 2, 'Markov_long speed dir-lat speed dir': 2, 'GRU_Att_long speed dir': 1, 'Markov_long speed ones dir-lat speed ones dir': 2}
-UNITS_long speed ones dir 13.08
-UNITS_long no abs 6.15
-UNITS_long speed dir 16.15
-LSTM_long no abs 15.38
-RNN_long no abs 3.85
-GRU_long no abs 6.92
+Markov_long no abs-lat no abs 3.85
+GRU_Att_long speed dir 0.77
+trapz x {'GRU_Att_long no abs': 57, 'RNN_long speed dir': 2, 'Markov_long no abs-lat no abs': 35, 'LSTM_long speed dir': 6, 'GRU_long speed ones dir': 8, 'Markov_long speed ones dir-lat speed ones dir': 6, 'RNN_long speed ones dir': 1, 'GRU_long speed dir': 8, 'Markov_long speed dir-lat speed dir': 5, 'GRU_Att_long speed ones dir': 1, 'LSTM_long speed ones dir': 1}
+GRU_Att_long no abs 43.85
+RNN_long speed dir 1.54
+Markov_long no abs-lat no abs 26.92
+LSTM_long speed dir 4.62
+GRU_long speed ones dir 6.15
+Markov_long speed ones dir-lat speed ones dir 4.62
+RNN_long speed ones dir 0.77
+GRU_long speed dir 6.15
+Markov_long speed dir-lat speed dir 3.85
+GRU_Att_long speed ones dir 0.77
+LSTM_long speed ones dir 0.77
+trapz y {'GRU_long no abs': 20, 'LSTM_long no abs': 29, 'RNN_long no abs': 8, 'Markov_long speed ones dir-lat speed ones dir': 5, 'GRU_long speed ones dir': 6, 'Markov_long no abs-lat no abs': 3, 'GRU_long speed dir': 8, 'RNN_long speed dir': 14, 'RNN_long speed ones dir': 8, 'LSTM_long speed dir': 8, 'GRU_Att_long no abs': 12, 'LSTM_long speed ones dir': 3, 'GRU_Att_long speed ones dir': 4, 'Markov_long speed dir-lat speed dir': 2}
+GRU_long no abs 15.38
+LSTM_long no abs 22.31
+RNN_long no abs 6.15
+Markov_long speed ones dir-lat speed ones dir 3.85
 GRU_long speed ones dir 4.62
 Markov_long no abs-lat no abs 2.31
-GRU_long speed dir 4.62
+GRU_long speed dir 6.15
 RNN_long speed dir 10.77
-RNN_long speed ones dir 4.62
-LSTM_long speed dir 4.62
-GRU_Att_long no abs 1.54
-GRU_Att_long speed ones dir 1.54
+RNN_long speed ones dir 6.15
+LSTM_long speed dir 6.15
+GRU_Att_long no abs 9.23
+LSTM_long speed ones dir 2.31
+GRU_Att_long speed ones dir 3.08
 Markov_long speed dir-lat speed dir 1.54
+euclidean {'GRU_Att_long no abs': 121, 'GRU_Att_long speed ones dir': 2, 'Markov_long no abs-lat no abs': 5, 'GRU_long speed ones dir': 1, 'GRU_Att_long speed dir': 1}
+GRU_Att_long no abs 93.08
+GRU_Att_long speed ones dir 1.54
+Markov_long no abs-lat no abs 3.85
+GRU_long speed ones dir 0.77
 GRU_Att_long speed dir 0.77
-Markov_long speed ones dir-lat speed ones dir 1.54
-euclidean {'GRU_Att_long no abs': 19, 'UNITS_long no abs': 111}
-GRU_Att_long no abs 14.62
-UNITS_long no abs 85.38
-best trapz x UNITS long no abs Vehicle_4/cleaned_csv/events_8893676.csv 0.0003251400000000293
-worst trapz x UNITS long no abs Vehicle_16/cleaned_csv/events_9547451.csv 12.485214414999746
-best trapz x UNITS long speed dir Vehicle_17/cleaned_csv/events_8577509.csv 0.01612531622201986
-worst trapz x UNITS long speed dir Vehicle_16/cleaned_csv/events_8565150.csv 90.0752128924787
-best trapz x UNITS long speed ones dir Vehicle_17/cleaned_csv/events_9492910.csv 0.012424038972758233
-worst trapz x UNITS long speed ones dir Vehicle_16/cleaned_csv/events_8565150.csv 88.74882295343792
-best trapz x GRU_Att long no abs Vehicle_6/cleaned_csv/events_9476572.csv 0.0014483059999996217
-worst trapz x GRU_Att long no abs Vehicle_16/cleaned_csv/events_8565150.csv 28.466411101002336
-best trapz x GRU_Att long speed dir Vehicle_17/cleaned_csv/events_8577509.csv 0.011037256495270584
-worst trapz x GRU_Att long speed dir Vehicle_16/cleaned_csv/events_8565150.csv 127.49195221236175
-best trapz x GRU_Att long speed ones dir Vehicle_17/cleaned_csv/events_8577509.csv 0.00364102600331756
-worst trapz x GRU_Att long speed ones dir Vehicle_16/cleaned_csv/events_8565150.csv 108.11198648091204
-best trapz y UNITS long no abs Vehicle_6/cleaned_csv/events_9476572.csv 7.01000000001388e-06
-worst trapz y UNITS long no abs Vehicle_16/cleaned_csv/events_8565150.csv 1.5959035250005797
-best trapz y UNITS long speed dir Vehicle_17/cleaned_csv/events_9492910.csv 1.4729081961650792e-05
-worst trapz y UNITS long speed dir Vehicle_16/cleaned_csv/events_8565150.csv 1.5661831721911597
-best trapz y UNITS long speed ones dir Vehicle_6/cleaned_csv/events_9476572.csv 2.528670663093542e-06
-worst trapz y UNITS long speed ones dir Vehicle_16/cleaned_csv/events_8565150.csv 1.566774095131791
-best trapz y GRU_Att long no abs Vehicle_6/cleaned_csv/events_9476572.csv 1.483500000000644e-06
-worst trapz y GRU_Att long no abs Vehicle_16/cleaned_csv/events_8565150.csv 15.174093135500726
-best trapz y GRU_Att long speed dir Vehicle_6/cleaned_csv/events_9476572.csv 3.923218184832648e-05
-worst trapz y GRU_Att long speed dir Vehicle_16/cleaned_csv/events_8565150.csv 13.455825188971062
-best trapz y GRU_Att long speed ones dir Vehicle_6/cleaned_csv/events_9476572.csv 3.899319254173535e-05
-worst trapz y GRU_Att long speed ones dir Vehicle_16/cleaned_csv/events_8565150.csv 14.830888353407147
-best euclidean UNITS long no abs Vehicle_11/cleaned_csv/events_8933205.csv 0.0
-worst euclidean UNITS long no abs Vehicle_16/cleaned_csv/events_9547451.csv 0.01112134222222222
-best euclidean UNITS long speed dir Vehicle_2/cleaned_csv/events_9574020.csv 0.00024461823434798594
-worst euclidean UNITS long speed dir Vehicle_16/cleaned_csv/events_8565150.csv 0.05504611101974062
-best euclidean UNITS long speed ones dir Vehicle_2/cleaned_csv/events_9574020.csv 0.0002762566273650611
-worst euclidean UNITS long speed ones dir Vehicle_16/cleaned_csv/events_8565150.csv 0.05411163851500837
-best euclidean GRU_Att long no abs Vehicle_2/cleaned_csv/events_9574020.csv 0.00010063749999999988
-worst euclidean GRU_Att long no abs Vehicle_10/cleaned_csv/events_8601407.csv 0.008662965333333467
-best euclidean GRU_Att long speed dir Vehicle_2/cleaned_csv/events_9574020.csv 0.00029621427140817723
-worst euclidean GRU_Att long speed dir Vehicle_16/cleaned_csv/events_8565150.csv 0.06739168623831247
-best euclidean GRU_Att long speed ones dir Vehicle_2/cleaned_csv/events_9574020.csv 0.00027030883698881785
-worst euclidean GRU_Att long speed ones dir Vehicle_16/cleaned_csv/events_8565150.csv 0.054200466861116875
-17
+best trapz x UNITS long no abs Vehicle_17/cleaned_csv/events_8577509.csv 0.0018203181861181778
+worst trapz x UNITS long no abs Vehicle_10/cleaned_csv/events_8601407.csv 17.04195874238053
+best trapz x UNITS long speed dir Vehicle_17/cleaned_csv/events_8577509.csv 0.0025103220925879466
+worst trapz x UNITS long speed dir Vehicle_16/cleaned_csv/events_8565150.csv 107.4388226784605
+best trapz x UNITS long speed ones dir Vehicle_16/cleaned_csv/events_8442479.csv 0.001994146417327869
+worst trapz x UNITS long speed ones dir Vehicle_16/cleaned_csv/events_8565150.csv 110.57427559935257
+best trapz y UNITS long no abs Vehicle_17/cleaned_csv/events_8500643.csv 8.382342996139658e-06
+worst trapz y UNITS long no abs Vehicle_16/cleaned_csv/events_8965175.csv 1.314813847891287
+best trapz y UNITS long speed dir Vehicle_17/cleaned_csv/events_8500643.csv 5.769502691944234e-05
+worst trapz y UNITS long speed dir Vehicle_9/cleaned_csv/events_9150982.csv 12.83815469774322
+best trapz y UNITS long speed ones dir Vehicle_9/cleaned_csv/events_8965040.csv 3.355087946055324e-05
+worst trapz y UNITS long speed ones dir Vehicle_9/cleaned_csv/events_9150982.csv 12.866602858376382
+best euclidean UNITS long no abs Vehicle_2/cleaned_csv/events_9574020.csv 3.2807444596596e-05
+worst euclidean UNITS long no abs Vehicle_10/cleaned_csv/events_8601407.csv 0.01665355033138867
+best euclidean UNITS long speed dir Vehicle_17/cleaned_csv/events_8577509.csv 0.00021658258325556138
+worst euclidean UNITS long speed dir Vehicle_16/cleaned_csv/events_9547451.csv 0.06434463073276767
+best euclidean UNITS long speed ones dir Vehicle_2/cleaned_csv/events_9574020.csv 0.00029667920952717577
+worst euclidean UNITS long speed ones dir Vehicle_16/cleaned_csv/events_8565150.csv 0.06524503695346302
 8
-25
+7
+15
 UNITS long no abs
 best
-Mosaic_RNN_part/Vehicle_11_events_8933205_UNITS_long no abs_lat no abs_test_mosaic.png
-Mosaic_RNN_part/Vehicle_4_events_8893676_UNITS_long no abs_lat no abs_test_mosaic.png
-Mosaic_RNN_part/Vehicle_6_events_9476572_UNITS_long no abs_lat no abs_test_mosaic.png
+Mosaic_RNN_part/Vehicle_17_events_8500643_UNITS_long no abs_lat no abs_test_mosaic.png
+Mosaic_RNN_part/Vehicle_17_events_8577509_UNITS_long no abs_lat no abs_test_mosaic.png
+Mosaic_RNN_part/Vehicle_2_events_9574020_UNITS_long no abs_lat no abs_test_mosaic.png
 worst
-Mosaic_RNN_part/Vehicle_16_events_8565150_UNITS_long no abs_lat no abs_test_mosaic.png
-Mosaic_RNN_part/Vehicle_16_events_9547451_UNITS_long no abs_lat no abs_test_mosaic.png
+Mosaic_RNN_part/Vehicle_10_events_8601407_UNITS_long no abs_lat no abs_test_mosaic.png
+Mosaic_RNN_part/Vehicle_16_events_8965175_UNITS_long no abs_lat no abs_test_mosaic.png
 UNITS long speed dir
 best
+Mosaic_RNN_part/Vehicle_17_events_8500643_UNITS_long speed dir_lat speed dir_test_mosaic.png
 Mosaic_RNN_part/Vehicle_17_events_8577509_UNITS_long speed dir_lat speed dir_test_mosaic.png
-Mosaic_RNN_part/Vehicle_17_events_9492910_UNITS_long speed dir_lat speed dir_test_mosaic.png
-Mosaic_RNN_part/Vehicle_2_events_9574020_UNITS_long speed dir_lat speed dir_test_mosaic.png
 worst
 Mosaic_RNN_part/Vehicle_16_events_8565150_UNITS_long speed dir_lat speed dir_test_mosaic.png
+Mosaic_RNN_part/Vehicle_16_events_9547451_UNITS_long speed dir_lat speed dir_test_mosaic.png
+Mosaic_RNN_part/Vehicle_9_events_9150982_UNITS_long speed dir_lat speed dir_test_mosaic.png
 UNITS long speed ones dir
 best
-Mosaic_RNN_part/Vehicle_17_events_9492910_UNITS_long speed ones dir_lat speed ones dir_test_mosaic.png
+Mosaic_RNN_part/Vehicle_16_events_8442479_UNITS_long speed ones dir_lat speed ones dir_test_mosaic.png
 Mosaic_RNN_part/Vehicle_2_events_9574020_UNITS_long speed ones dir_lat speed ones dir_test_mosaic.png
-Mosaic_RNN_part/Vehicle_6_events_9476572_UNITS_long speed ones dir_lat speed ones dir_test_mosaic.png
+Mosaic_RNN_part/Vehicle_9_events_8965040_UNITS_long speed ones dir_lat speed ones dir_test_mosaic.png
 worst
 Mosaic_RNN_part/Vehicle_16_events_8565150_UNITS_long speed ones dir_lat speed ones dir_test_mosaic.png
-GRU_Att long no abs
-best
-Mosaic_RNN_part/Vehicle_2_events_9574020_GRU_Att_long no abs_lat no abs_test_mosaic.png
-Mosaic_RNN_part/Vehicle_6_events_9476572_GRU_Att_long no abs_lat no abs_test_mosaic.png
-worst
-Mosaic_RNN_part/Vehicle_10_events_8601407_GRU_Att_long no abs_lat no abs_test_mosaic.png
-Mosaic_RNN_part/Vehicle_16_events_8565150_GRU_Att_long no abs_lat no abs_test_mosaic.png
-GRU_Att long speed dir
-best
-Mosaic_RNN_part/Vehicle_17_events_8577509_GRU_Att_long speed dir_lat speed dir_test_mosaic.png
-Mosaic_RNN_part/Vehicle_2_events_9574020_GRU_Att_long speed dir_lat speed dir_test_mosaic.png
-Mosaic_RNN_part/Vehicle_6_events_9476572_GRU_Att_long speed dir_lat speed dir_test_mosaic.png
-worst
-Mosaic_RNN_part/Vehicle_16_events_8565150_GRU_Att_long speed dir_lat speed dir_test_mosaic.png
-GRU_Att long speed ones dir
-best
-Mosaic_RNN_part/Vehicle_17_events_8577509_GRU_Att_long speed ones dir_lat speed ones dir_test_mosaic.png
-Mosaic_RNN_part/Vehicle_2_events_9574020_GRU_Att_long speed ones dir_lat speed ones dir_test_mosaic.png
-Mosaic_RNN_part/Vehicle_6_events_9476572_GRU_Att_long speed ones dir_lat speed ones dir_test_mosaic.png
-worst
-Mosaic_RNN_part/Vehicle_16_events_8565150_GRU_Att_long speed ones dir_lat speed ones dir_test_mosaic.png
-
+Mosaic_RNN_part/Vehicle_9_events_9150982_UNITS_long speed ones dir_lat speed ones dir_test_mosaic.png
+PS C:\Users\lzuzi\Documents\GitHub\UniTS> & C:/Users/lzuzi/anaconda3/python.exe c:/Users/lzuzi/Documents/GitHub/UniTS/UNITS_dist_traj_MAE.py
+mean_absolute_error_time
+UNITS & $4.712013$ \\ \hline
+GRU & $7.926579$ \\ \hline
+LSTM & $7.610505$ \\ \hline
+RNN & $8.496397$ \\ \hline
+GRU_Att & $30.491563$ \\ \hline
+Markov & $9.000045$ \\ \hline
+mean_absolute_error_pred
+UNITS & $x$ and $y$ offset & $0.003006$ \\ \hline
+UNITS & Speed and heading & $0.032526$ \\ \hline
+UNITS & Speed and heading, $1$ $\mathrm{s}$ & $0.032363$ \\ \hline
+GRU & $x$ and $y$ offset & $0.023885$ \\ \hline
+GRU & Speed and heading & $0.02074$ \\ \hline
+GRU & Speed and heading, $1$ $\mathrm{s}$ & $0.02063$ \\ \hline
+LSTM & $x$ and $y$ offset & $0.060651$ \\ \hline
+LSTM & Speed and heading & $0.025455$ \\ \hline
+LSTM & Speed and heading, $1$ $\mathrm{s}$ & $0.025271$ \\ \hline
+RNN & $x$ and $y$ offset & $0.082291$ \\ \hline
+RNN & Speed and heading & $0.024922$ \\ \hline
+RNN & Speed and heading, $1$ $\mathrm{s}$ & $0.024687$ \\ \hline
+GRU_Att & $x$ and $y$ offset & $0.0014$ \\ \hline
+GRU_Att & Speed and heading & $0.008013$ \\ \hline
+GRU_Att & Speed and heading, $1$ $\mathrm{s}$ & $0.006313$ \\ \hline
+Markov & $x$ and $y$ offset & $0.005477$ \\ \hline
+Markov & Speed and heading & $0.007456$ \\ \hline
+Markov & Speed and heading, $1$ $\mathrm{s}$ & $0.007457$ \\ \hline
+mean_absolute_error_pred_wt
+UNITS & $x$ and $y$ offset & $1.572675$ \\ \hline
+UNITS & Speed and heading & $1.592355$ \\ \hline
+UNITS & Speed and heading, $1$ $\mathrm{s}$ & $1.592247$ \\ \hline
+GRU & $x$ and $y$ offset & $2.658116$ \\ \hline
+GRU & Speed and heading & $2.65602$ \\ \hline
+GRU & Speed and heading, $1$ $\mathrm{s}$ & $2.655946$ \\ \hline
+LSTM & $x$ and $y$ offset & $2.577269$ \\ \hline
+LSTM & Speed and heading & $2.553805$ \\ \hline
+LSTM & Speed and heading, $1$ $\mathrm{s}$ & $2.553682$ \\ \hline
+RNN & $x$ and $y$ offset & $2.886993$ \\ \hline
+RNN & Speed and heading & $2.848747$ \\ \hline
+RNN & Speed and heading, $1$ $\mathrm{s}$ & $2.84859$ \\ \hline
+GRU_Att & $x$ and $y$ offset & $10.164788$ \\ \hline
+GRU_Att & Speed and heading & $10.169197$ \\ \hline
+GRU_Att & Speed and heading, $1$ $\mathrm{s}$ & $10.168063$ \\ \hline
+Markov & $x$ and $y$ offset & $3.003667$ \\ \hline
+Markov & Speed and heading & $3.004985$ \\ \hline
+Markov & Speed and heading, $1$ $\mathrm{s}$ & $3.004986$ \\ \hline
+mean_absolute_error_long_pred
+UNITS & $x$ and $y$ offset & $0.003088$ \\ \hline
+UNITS & Speed and heading & $0.016455$ \\ \hline
+UNITS & Speed and heading, $1$ $\mathrm{s}$ & $0.016522$ \\ \hline
+GRU & $x$ and $y$ offset & $0.037423$ \\ \hline
+GRU & Speed and heading & $0.013448$ \\ \hline
+GRU & Speed and heading, $1$ $\mathrm{s}$ & $0.013481$ \\ \hline
+LSTM & $x$ and $y$ offset & $0.084376$ \\ \hline
+LSTM & Speed and heading & $0.018101$ \\ \hline
+LSTM & Speed and heading, $1$ $\mathrm{s}$ & $0.018157$ \\ \hline
+RNN & $x$ and $y$ offset & $0.074935$ \\ \hline
+RNN & Speed and heading & $0.017059$ \\ \hline
+RNN & Speed and heading, $1$ $\mathrm{s}$ & $0.017172$ \\ \hline
+GRU_Att & $x$ and $y$ offset & $0.001329$ \\ \hline
+GRU_Att & Speed and heading & $0.013352$ \\ \hline
+GRU_Att & Speed and heading, $1$ $\mathrm{s}$ & $0.011366$ \\ \hline
+Markov & $x$ and $y$ offset & $0.006765$ \\ \hline
+Markov & Speed and heading & $0.011469$ \\ \hline
+Markov & Speed and heading, $1$ $\mathrm{s}$ & $0.011967$ \\ \hline
+mean_absolute_error_long_pred_wt
+UNITS & $x$ and $y$ offset & $2.357551$ \\ \hline
+UNITS & Speed and heading & $2.364234$ \\ \hline
+UNITS & Speed and heading, $1$ $\mathrm{s}$ & $2.364268$ \\ \hline
+GRU & $x$ and $y$ offset & $3.982001$ \\ \hline
+GRU & Speed and heading & $3.970014$ \\ \hline
+GRU & Speed and heading, $1$ $\mathrm{s}$ & $3.97003$ \\ \hline
+LSTM & $x$ and $y$ offset & $3.84744$ \\ \hline
+LSTM & Speed and heading & $3.814303$ \\ \hline
+LSTM & Speed and heading, $1$ $\mathrm{s}$ & $3.814331$ \\ \hline
+RNN & $x$ and $y$ offset & $4.285666$ \\ \hline
+RNN & Speed and heading & $4.256728$ \\ \hline
+RNN & Speed and heading, $1$ $\mathrm{s}$ & $4.256785$ \\ \hline
+GRU_Att & $x$ and $y$ offset & $15.246446$ \\ \hline
+GRU_Att & Speed and heading & $15.252458$ \\ \hline
+GRU_Att & Speed and heading, $1$ $\mathrm{s}$ & $15.251465$ \\ \hline
+Markov & $x$ and $y$ offset & $4.503405$ \\ \hline
+Markov & Speed and heading & $4.505757$ \\ \hline
+Markov & Speed and heading, $1$ $\mathrm{s}$ & $4.506006$ \\ \hline
+mean_absolute_error_lat_pred
+UNITS & $x$ and $y$ offset & $0.002924$ \\ \hline
+UNITS & Speed and heading & $0.048597$ \\ \hline
+UNITS & Speed and heading, $1$ $\mathrm{s}$ & $0.048205$ \\ \hline
+GRU & $x$ and $y$ offset & $0.010347$ \\ \hline
+GRU & Speed and heading & $0.028032$ \\ \hline
+GRU & Speed and heading, $1$ $\mathrm{s}$ & $0.027778$ \\ \hline
+LSTM & $x$ and $y$ offset & $0.036925$ \\ \hline
+LSTM & Speed and heading & $0.032808$ \\ \hline
+LSTM & Speed and heading, $1$ $\mathrm{s}$ & $0.032386$ \\ \hline
+RNN & $x$ and $y$ offset & $0.089647$ \\ \hline
+RNN & Speed and heading & $0.032785$ \\ \hline
+RNN & Speed and heading, $1$ $\mathrm{s}$ & $0.032202$ \\ \hline
+GRU_Att & $x$ and $y$ offset & $0.001471$ \\ \hline
+GRU_Att & Speed and heading & $0.002674$ \\ \hline
+GRU_Att & Speed and heading, $1$ $\mathrm{s}$ & $0.00126$ \\ \hline
+Markov & $x$ and $y$ offset & $0.004189$ \\ \hline
+Markov & Speed and heading & $0.003443$ \\ \hline
+Markov & Speed and heading, $1$ $\mathrm{s}$ & $0.002947$ \\ \hline
+mean_absolute_error_lat_pred_wt
+UNITS & $x$ and $y$ offset & $2.357469$ \\ \hline
+UNITS & Speed and heading & $2.380305$ \\ \hline
+UNITS & Speed and heading, $1$ $\mathrm{s}$ & $2.380109$ \\ \hline
+GRU & $x$ and $y$ offset & $3.968463$ \\ \hline
+GRU & Speed and heading & $3.977305$ \\ \hline
+GRU & Speed and heading, $1$ $\mathrm{s}$ & $3.977179$ \\ \hline
+LSTM & $x$ and $y$ offset & $3.823715$ \\ \hline
+LSTM & Speed and heading & $3.821656$ \\ \hline
+LSTM & Speed and heading, $1$ $\mathrm{s}$ & $3.821445$ \\ \hline
+RNN & $x$ and $y$ offset & $4.293022$ \\ \hline
+RNN & Speed and heading & $4.264591$ \\ \hline
+RNN & Speed and heading, $1$ $\mathrm{s}$ & $4.264299$ \\ \hline
+GRU_Att & $x$ and $y$ offset & $15.246517$ \\ \hline
+GRU_Att & Speed and heading & $15.247119$ \\ \hline
+GRU_Att & Speed and heading, $1$ $\mathrm{s}$ & $15.246411$ \\ \hline
+Markov & $x$ and $y$ offset & $4.502117$ \\ \hline
+Markov & Speed and heading & $4.501744$ \\ \hline
+Markov & Speed and heading, $1$ $\mathrm{s}$ & $4.501496$ \\ \hline
+PS C:\Users\lzuzi\Documents\GitHub\UniTS> & C:/Users/lzuzi/anaconda3/python.exe c:/Users/lzuzi/Documents/GitHub/UniTS/UNITS_dist_traj_R2.py
 r2_time
-UNITS & $99.99\%$ \\ \hline
+UNITS & $99.97\%$ \\ \hline
 GRU & $99.96\%$ \\ \hline
 LSTM & $99.95\%$ \\ \hline
 RNN & $99.94\%$ \\ \hline
 GRU_Att & $99.09\%$ \\ \hline
 Markov & $99.94\%$ \\ \hline
 r2_pred
-UNITS & $x$ and $y$ offset & $99.86\%$ \\ \hline
-UNITS & Speed and heading & $96.95\%$ \\ \hline
-UNITS & Speed and heading, $1$ $\mathrm{s}$ & $96.97\%$ \\ \hline
+UNITS & $x$ and $y$ offset & $99.39\%$ \\ \hline
+UNITS & Speed and heading & $-3.63\%$ \\ \hline
+UNITS & Speed and heading, $1$ $\mathrm{s}$ & $-2.81\%$ \\ \hline
 GRU & $x$ and $y$ offset & $77.77\%$ \\ \hline
 GRU & Speed and heading & $49.76\%$ \\ \hline
 GRU & Speed and heading, $1$ $\mathrm{s}$ & $51.32\%$ \\ \hline
@@ -193,9 +285,9 @@ Markov & $x$ and $y$ offset & $95.99\%$ \\ \hline
 Markov & Speed and heading & $95.66\%$ \\ \hline
 Markov & Speed and heading, $1$ $\mathrm{s}$ & $95.63\%$ \\ \hline
 r2_pred_wt
-UNITS & $x$ and $y$ offset & $99.9\%$ \\ \hline
-UNITS & Speed and heading & $97.96\%$ \\ \hline
-UNITS & Speed and heading, $1$ $\mathrm{s}$ & $97.97\%$ \\ \hline
+UNITS & $x$ and $y$ offset & $99.58\%$ \\ \hline
+UNITS & Speed and heading & $30.9\%$ \\ \hline
+UNITS & Speed and heading, $1$ $\mathrm{s}$ & $31.45\%$ \\ \hline
 GRU & $x$ and $y$ offset & $85.17\%$ \\ \hline
 GRU & Speed and heading & $66.49\%$ \\ \hline
 GRU & Speed and heading, $1$ $\mathrm{s}$ & $67.53\%$ \\ \hline
@@ -212,9 +304,9 @@ Markov & $x$ and $y$ offset & $97.3\%$ \\ \hline
 Markov & Speed and heading & $97.09\%$ \\ \hline
 Markov & Speed and heading, $1$ $\mathrm{s}$ & $97.07\%$ \\ \hline
 r2_long_pred
-UNITS & $x$ and $y$ offset & $99.83\%$ \\ \hline
-UNITS & Speed and heading & $93.96\%$ \\ \hline
-UNITS & Speed and heading, $1$ $\mathrm{s}$ & $94.01\%$ \\ \hline
+UNITS & $x$ and $y$ offset & $99.58\%$ \\ \hline
+UNITS & Speed and heading & $88.06\%$ \\ \hline
+UNITS & Speed and heading, $1$ $\mathrm{s}$ & $88.0\%$ \\ \hline
 GRU & $x$ and $y$ offset & $62.12\%$ \\ \hline
 GRU & Speed and heading & $92.64\%$ \\ \hline
 GRU & Speed and heading, $1$ $\mathrm{s}$ & $92.87\%$ \\ \hline
@@ -231,9 +323,9 @@ Markov & $x$ and $y$ offset & $95.17\%$ \\ \hline
 Markov & Speed and heading & $92.83\%$ \\ \hline
 Markov & Speed and heading, $1$ $\mathrm{s}$ & $92.51\%$ \\ \hline
 r2_long_pred_wt
-UNITS & $x$ and $y$ offset & $99.91\%$ \\ \hline
-UNITS & Speed and heading & $96.97\%$ \\ \hline
-UNITS & Speed and heading, $1$ $\mathrm{s}$ & $97.0\%$ \\ \hline
+UNITS & $x$ and $y$ offset & $99.77\%$ \\ \hline
+UNITS & Speed and heading & $94.02\%$ \\ \hline
+UNITS & Speed and heading, $1$ $\mathrm{s}$ & $93.98\%$ \\ \hline
 GRU & $x$ and $y$ offset & $81.04\%$ \\ \hline
 GRU & Speed and heading & $96.3\%$ \\ \hline
 GRU & Speed and heading, $1$ $\mathrm{s}$ & $96.41\%$ \\ \hline
@@ -250,9 +342,9 @@ Markov & $x$ and $y$ offset & $97.56\%$ \\ \hline
 Markov & Speed and heading & $96.38\%$ \\ \hline
 Markov & Speed and heading, $1$ $\mathrm{s}$ & $96.22\%$ \\ \hline
 r2_lat_pred
-UNITS & $x$ and $y$ offset & $99.9\%$ \\ \hline
-UNITS & Speed and heading & $99.93\%$ \\ \hline
-UNITS & Speed and heading, $1$ $\mathrm{s}$ & $99.93\%$ \\ \hline
+UNITS & $x$ and $y$ offset & $99.2\%$ \\ \hline
+UNITS & Speed and heading & $-95.32\%$ \\ \hline
+UNITS & Speed and heading, $1$ $\mathrm{s}$ & $-93.62\%$ \\ \hline
 GRU & $x$ and $y$ offset & $93.42\%$ \\ \hline
 GRU & Speed and heading & $6.89\%$ \\ \hline
 GRU & Speed and heading, $1$ $\mathrm{s}$ & $9.77\%$ \\ \hline
@@ -269,9 +361,9 @@ Markov & $x$ and $y$ offset & $96.8\%$ \\ \hline
 Markov & Speed and heading & $98.5\%$ \\ \hline
 Markov & Speed and heading, $1$ $\mathrm{s}$ & $98.75\%$ \\ \hline
 r2_lat_pred_wt
-UNITS & $x$ and $y$ offset & $99.94\%$ \\ \hline
-UNITS & Speed and heading & $99.96\%$ \\ \hline
-UNITS & Speed and heading, $1$ $\mathrm{s}$ & $99.96\%$ \\ \hline
+UNITS & $x$ and $y$ offset & $99.58\%$ \\ \hline
+UNITS & Speed and heading & $2.32\%$ \\ \hline
+UNITS & Speed and heading, $1$ $\mathrm{s}$ & $3.17\%$ \\ \hline
 GRU & $x$ and $y$ offset & $96.69\%$ \\ \hline
 GRU & Speed and heading & $53.42\%$ \\ \hline
 GRU & Speed and heading, $1$ $\mathrm{s}$ & $54.86\%$ \\ \hline
@@ -287,3 +379,125 @@ GRU_Att & Speed and heading, $1$ $\mathrm{s}$ & $99.49\%$ \\ \hline
 Markov & $x$ and $y$ offset & $98.37\%$ \\ \hline
 Markov & Speed and heading & $99.22\%$ \\ \hline
 Markov & Speed and heading, $1$ $\mathrm{s}$ & $99.34\%$ \\ \hline
+PS C:\Users\lzuzi\Documents\GitHub\UniTS> & C:/Users/lzuzi/anaconda3/python.exe c:/Users/lzuzi/Documents/GitHub/UniTS/UNITS_dist_traj_RMSE.py
+RMSE_time
+UNITS & $910.27\%$ \\ \hline
+GRU & $1055.42\%$ \\ \hline
+LSTM & $1073.32\%$ \\ \hline
+RNN & $1244.84\%$ \\ \hline
+GRU_Att & $4785.73\%$ \\ \hline
+Markov & $1250.07\%$ \\ \hline
+RMSE_pred
+UNITS & $x$ and $y$ offset & $0.5\%$ \\ \hline
+UNITS & Speed and heading & $5.69\%$ \\ \hline
+UNITS & Speed and heading, $1$ $\mathrm{s}$ & $5.67\%$ \\ \hline
+GRU & $x$ and $y$ offset & $3.59\%$ \\ \hline
+GRU & Speed and heading & $4.0\%$ \\ \hline
+GRU & Speed and heading, $1$ $\mathrm{s}$ & $3.94\%$ \\ \hline
+LSTM & $x$ and $y$ offset & $8.45\%$ \\ \hline
+LSTM & Speed and heading & $4.29\%$ \\ \hline
+LSTM & Speed and heading, $1$ $\mathrm{s}$ & $4.23\%$ \\ \hline
+RNN & $x$ and $y$ offset & $10.74\%$ \\ \hline
+RNN & Speed and heading & $4.19\%$ \\ \hline
+RNN & Speed and heading, $1$ $\mathrm{s}$ & $4.11\%$ \\ \hline
+GRU_Att & $x$ and $y$ offset & $0.22\%$ \\ \hline
+GRU_Att & Speed and heading & $1.66\%$ \\ \hline
+GRU_Att & Speed and heading, $1$ $\mathrm{s}$ & $1.36\%$ \\ \hline
+Markov & $x$ and $y$ offset & $1.25\%$ \\ \hline
+Markov & Speed and heading & $1.4\%$ \\ \hline
+Markov & Speed and heading, $1$ $\mathrm{s}$ & $1.42\%$ \\ \hline
+RMSE_pred_wt
+UNITS & $x$ and $y$ offset & $525.55\%$ \\ \hline
+UNITS & Speed and heading & $525.57\%$ \\ \hline
+UNITS & Speed and heading, $1$ $\mathrm{s}$ & $525.57\%$ \\ \hline
+GRU & $x$ and $y$ offset & $609.36\%$ \\ \hline
+GRU & Speed and heading & $609.36\%$ \\ \hline
+GRU & Speed and heading, $1$ $\mathrm{s}$ & $609.36\%$ \\ \hline
+LSTM & $x$ and $y$ offset & $619.72\%$ \\ \hline
+LSTM & Speed and heading & $619.69\%$ \\ \hline
+LSTM & Speed and heading, $1$ $\mathrm{s}$ & $619.69\%$ \\ \hline
+RNN & $x$ and $y$ offset & $718.76\%$ \\ \hline
+RNN & Speed and heading & $718.72\%$ \\ \hline
+RNN & Speed and heading, $1$ $\mathrm{s}$ & $718.72\%$ \\ \hline
+GRU_Att & $x$ and $y$ offset & $2763.04\%$ \\ \hline
+GRU_Att & Speed and heading & $2763.04\%$ \\ \hline
+GRU_Att & Speed and heading, $1$ $\mathrm{s}$ & $2763.04\%$ \\ \hline
+Markov & $x$ and $y$ offset & $721.73\%$ \\ \hline
+Markov & Speed and heading & $721.73\%$ \\ \hline
+Markov & Speed and heading, $1$ $\mathrm{s}$ & $721.73\%$ \\ \hline
+RMSE_long_pred
+UNITS & $x$ and $y$ offset & $0.52\%$ \\ \hline
+UNITS & Speed and heading & $2.74\%$ \\ \hline
+UNITS & Speed and heading, $1$ $\mathrm{s}$ & $2.75\%$ \\ \hline
+GRU & $x$ and $y$ offset & $4.88\%$ \\ \hline
+GRU & Speed and heading & $2.15\%$ \\ \hline
+GRU & Speed and heading, $1$ $\mathrm{s}$ & $2.12\%$ \\ \hline
+LSTM & $x$ and $y$ offset & $10.96\%$ \\ \hline
+LSTM & Speed and heading & $2.94\%$ \\ \hline
+LSTM & Speed and heading, $1$ $\mathrm{s}$ & $2.93\%$ \\ \hline
+RNN & $x$ and $y$ offset & $9.71\%$ \\ \hline
+RNN & Speed and heading & $2.73\%$ \\ \hline
+RNN & Speed and heading, $1$ $\mathrm{s}$ & $2.73\%$ \\ \hline
+GRU_Att & $x$ and $y$ offset & $0.21\%$ \\ \hline
+GRU_Att & Speed and heading & $2.31\%$ \\ \hline
+GRU_Att & Speed and heading, $1$ $\mathrm{s}$ & $1.91\%$ \\ \hline
+Markov & $x$ and $y$ offset & $1.56\%$ \\ \hline
+Markov & Speed and heading & $1.91\%$ \\ \hline
+Markov & Speed and heading, $1$ $\mathrm{s}$ & $1.95\%$ \\ \hline
+RMSE_long_pred_wt
+UNITS & $x$ and $y$ offset & $643.66\%$ \\ \hline
+UNITS & Speed and heading & $643.66\%$ \\ \hline
+UNITS & Speed and heading, $1$ $\mathrm{s}$ & $643.66\%$ \\ \hline
+GRU & $x$ and $y$ offset & $746.31\%$ \\ \hline
+GRU & Speed and heading & $746.3\%$ \\ \hline
+GRU & Speed and heading, $1$ $\mathrm{s}$ & $746.3\%$ \\ \hline
+LSTM & $x$ and $y$ offset & $758.99\%$ \\ \hline
+LSTM & Speed and heading & $758.96\%$ \\ \hline
+LSTM & Speed and heading, $1$ $\mathrm{s}$ & $758.96\%$ \\ \hline
+RNN & $x$ and $y$ offset & $880.26\%$ \\ \hline
+RNN & Speed and heading & $880.24\%$ \\ \hline
+RNN & Speed and heading, $1$ $\mathrm{s}$ & $880.24\%$ \\ \hline
+GRU_Att & $x$ and $y$ offset & $3384.02\%$ \\ \hline
+GRU_Att & Speed and heading & $3384.02\%$ \\ \hline
+GRU_Att & Speed and heading, $1$ $\mathrm{s}$ & $3384.02\%$ \\ \hline
+Markov & $x$ and $y$ offset & $883.93\%$ \\ \hline
+Markov & Speed and heading & $883.93\%$ \\ \hline
+Markov & Speed and heading, $1$ $\mathrm{s}$ & $883.93\%$ \\ \hline
+RMSE_lat_pred
+UNITS & $x$ and $y$ offset & $0.48\%$ \\ \hline
+UNITS & Speed and heading & $7.57\%$ \\ \hline
+UNITS & Speed and heading, $1$ $\mathrm{s}$ & $7.54\%$ \\ \hline
+GRU & $x$ and $y$ offset & $1.39\%$ \\ \hline
+GRU & Speed and heading & $5.23\%$ \\ \hline
+GRU & Speed and heading, $1$ $\mathrm{s}$ & $5.15\%$ \\ \hline
+LSTM & $x$ and $y$ offset & $4.78\%$ \\ \hline
+LSTM & Speed and heading & $5.31\%$ \\ \hline
+LSTM & Speed and heading, $1$ $\mathrm{s}$ & $5.21\%$ \\ \hline
+RNN & $x$ and $y$ offset & $11.68\%$ \\ \hline
+RNN & Speed and heading & $5.26\%$ \\ \hline
+RNN & Speed and heading, $1$ $\mathrm{s}$ & $5.14\%$ \\ \hline
+GRU_Att & $x$ and $y$ offset & $0.22\%$ \\ \hline
+GRU_Att & Speed and heading & $0.41\%$ \\ \hline
+GRU_Att & Speed and heading, $1$ $\mathrm{s}$ & $0.17\%$ \\ \hline
+Markov & $x$ and $y$ offset & $0.81\%$ \\ \hline
+Markov & Speed and heading & $0.56\%$ \\ \hline
+Markov & Speed and heading, $1$ $\mathrm{s}$ & $0.51\%$ \\ \hline
+RMSE_lat_pred_wt
+UNITS & $x$ and $y$ offset & $643.66\%$ \\ \hline
+UNITS & Speed and heading & $643.68\%$ \\ \hline
+UNITS & Speed and heading, $1$ $\mathrm{s}$ & $643.68\%$ \\ \hline
+GRU & $x$ and $y$ offset & $746.3\%$ \\ \hline
+GRU & Speed and heading & $746.31\%$ \\ \hline
+GRU & Speed and heading, $1$ $\mathrm{s}$ & $746.31\%$ \\ \hline
+LSTM & $x$ and $y$ offset & $758.96\%$ \\ \hline
+LSTM & Speed and heading & $758.96\%$ \\ \hline
+LSTM & Speed and heading, $1$ $\mathrm{s}$ & $758.96\%$ \\ \hline
+RNN & $x$ and $y$ offset & $880.27\%$ \\ \hline
+RNN & Speed and heading & $880.24\%$ \\ \hline
+RNN & Speed and heading, $1$ $\mathrm{s}$ & $880.24\%$ \\ \hline
+GRU_Att & $x$ and $y$ offset & $3384.02\%$ \\ \hline
+GRU_Att & Speed and heading & $3384.02\%$ \\ \hline
+GRU_Att & Speed and heading, $1$ $\mathrm{s}$ & $3384.02\%$ \\ \hline
+Markov & $x$ and $y$ offset & $883.93\%$ \\ \hline
+Markov & Speed and heading & $883.93\%$ \\ \hline
+Markov & Speed and heading, $1$ $\mathrm{s}$ & $883.93\%$ \\ \hline

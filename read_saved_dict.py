@@ -5,27 +5,6 @@ import pandas as pd
 from utils.metrics import metric_short
 import math
 from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
-
-username = "Admin"
-username = "lzuzi"
-
-def change_angle(angle, name_file):
-    
-    file_with_ride = pd.read_csv("C:/Users/" + username + "/Documents/GitHub/MarkovOtoTrak/" + name_file) 
-    
-    x_dir = list(file_with_ride["fields_longitude"])[0] < list(file_with_ride["fields_longitude"])[-1]
-    y_dir = list(file_with_ride["fields_latitude"])[0] < list(file_with_ride["fields_latitude"])[-1]
-
-    new_dir = (90 - angle + 360) % 360 
-    if not x_dir: 
-        new_dir = (180 - new_dir + 360) % 360
-    if not y_dir: 
-        new_dir = 360 - new_dir 
-
-    return new_dir
-
-def get_sides_from_angle(longest, angle):
-    return longest * np.cos(angle / 180 * np.pi), longest * np.sin(angle / 180 * np.pi)
  
 mode = "min"
 ndec = {"direction": 0, "time": 3, "speed": 0}
@@ -76,13 +55,15 @@ for varname in varnames:
                 pd_file_val = pd.read_csv("dataset_new/" + str(num) + "/" + varname + "/newdata_" + t.upper() + ".csv")
                 pd_file_val_transformed = transform_pd_file(pd_file_val)  
 
-                with open("results_eval/" + varname + "/" + s1 + s2 + str(num) + "_" + t + "/Y/" + mode + "_pred_Y_" + s1 + s2 + str(num) + "_" + t, 'rb') as file_object:
+                with open("results_eval/" + varname + "/" + s1 + s2 + str(num) + "_" + t + "/Y/candidates_all_Y_" + s1 + s2 + str(num) + "_" + t, 'rb') as file_object:
                     preds_val = pickle.load(file_object)  
                     file_object.close()
 
-                with open("results_eval/" + varname + "/" + s1 + s2 + str(num) + "_" + t + "/Y/" + mode + "_true_Y_" + s1 + s2 + str(num) + "_" + t, 'rb') as file_object:
+                with open("results_eval/" + varname + "/" + s1 + s2 + str(num) + "_" + t + "/Y/used_all_Y_" + s1 + s2 + str(num) + "_" + t, 'rb') as file_object:
                     trues_val = pickle.load(file_object)  
                     file_object.close()
+                    
+                preds_val = [np.average(val) for val in preds_val]
 
                 #mae, mse, rmse = metric_short(preds_val, trues_val)
                 #print(mae, mse, rmse)
@@ -119,13 +100,15 @@ for varname in chose_vals:
     pd_file_val = pd.read_csv("dataset_new/" + str(num) + "/" + varname + "/newdata_" + t.upper() + ".csv")
     pd_file_val_transformed = transform_pd_file(pd_file_val)  
 
-    with open("results_eval/" + varname + "/" + s1 + s2 + str(num) + "_" + t + "/Y/" + mode + "_pred_Y_" + s1 + s2 + str(num) + "_" + t, 'rb') as file_object:
+    with open("results_eval/" + varname + "/" + s1 + s2 + str(num) + "_" + t + "/Y/candidates_all_Y_" + s1 + s2 + str(num) + "_" + t, 'rb') as file_object:
         preds_val = pickle.load(file_object)  
         file_object.close()
 
-    with open("results_eval/" + varname + "/" + s1 + s2 + str(num) + "_" + t + "/Y/" + mode + "_true_Y_" + s1 + s2 + str(num) + "_" + t, 'rb') as file_object:
-        trues_val = pickle.load(file_object)
+    with open("results_eval/" + varname + "/" + s1 + s2 + str(num) + "_" + t + "/Y/used_all_Y_" + s1 + s2 + str(num) + "_" + t, 'rb') as file_object:
+        trues_val = pickle.load(file_object)  
         file_object.close()
+
+    preds_val = [np.average(val) for val in preds_val]
  
     with open("actual/actual_" + varname, 'rb') as file_object:
         file_object_test = pickle.load(file_object)
