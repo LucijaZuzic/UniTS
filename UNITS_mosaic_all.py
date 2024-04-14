@@ -386,8 +386,8 @@ for pair_best in find_all:
     vehicle = split_file_veh[0].replace("Vehicle_", "")
     ride = split_file_veh[-1].replace("events_", "").replace(".csv", "")
 
-    if not os.path.isdir("mosaic_attention_all"):
-        os.makedirs("mosaic_attention_all/")
+    if not os.path.isdir("mosaic_UniTS_all"):
+        os.makedirs("mosaic_UniTS_all/")
 
-    filename = "mosaic_attention_all/Vehicle_" + vehicle + "_events_" + ride + "_" + model_name + "_" + dist_name + "_" + dist_name.replace("long", "lat") + "_test_mosaic.png"
+    filename = "mosaic_UniTS_all/Vehicle_" + vehicle + "_events_" + ride + "_" + model_name + "_" + dist_name + "_" + dist_name.replace("long", "lat") + "_test_mosaic.png"
     draw_mosaic_one(actual_long_one, actual_lat_one, predicted_long_one, predicted_lat_one, k, model_name, filename, dist_name)
