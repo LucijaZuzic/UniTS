@@ -319,3 +319,51 @@ wandb:  View job at https://wandb.ai/lucija_zuzic/zeroshot_newdata_mine_all_29_t
 wandb: Synced 6 W&B file(s), 0 media file(s), 2 artifact file(s) and 0 other file(s)
 wandb: Find logs at: .\wandb\run-20240426_111301-w18ase8h\logs
 
+Epoch: 10 cost time: 574.8209733963013
+Epoch: 10, Steps: 21465 | Avg Train Loss: 0.2980977
+wandb: - 0.665 MB of 0.665 MB uploaded (0.008 MB deduped)
+wandb: Run history:
+wandb:                         loss_avg █▆▅▄▃▃▃▃▂▂▂▂▁▂▂▂▁▂▂▂▂▂▂▂▁▁▁▁▂▁▁▁▁▁▁▁▂▂▁▂
+wandb:                             norm █▂▄▆▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:         train_cls_loss_direction ▇█▇▅▄█▆▃▁▂▆▂▄▁▃▆▂▆▂▁▁▃▂▁▃▆▄▄▃▄▄▂▁▃▅▂▃▄▁▃
+wandb:   train_cls_loss_latitude_no_abs ▆▅█▆▂▃▄▁▂▃▂▁▂▂▂▂▄▄▂▃▁▂▅▄▂▂▂▅▂▁▃▁▃▂▄▃▃▃▁▃
+wandb:  train_cls_loss_longitude_no_abs █▆▆▄▂▃▃▄▂▁▂▁▃▂▁▂▂▃▂▃▁▃▃▁▃▁▂▁▁▂▄▁▄▂▁▂▂▂▆▁
+wandb:             train_cls_loss_speed ▄▆▂▃▃▅▂▃▁▃▁█▅▃▃▃▃▅▃▂▂▄▄▂▃▃▃▅▄▂▂▅▁▁▂▁▅▃▂▂
+wandb:              train_cls_loss_time ▇▅▅▆▃▅▃▅▃▅▄█▅▅▅▃▅▆▅▅▅▃▄▆▃▁▄▂▄▃▆▂▄▄▃▄▃▅▃▄
+wandb:                   train_loss_avg █▄▃▂▂▂▁▁▁▁
+wandb:        train_mask_loss_direction ▇█▇▅▄█▆▃▁▂▆▂▄▁▄▆▂▆▂▁▁▃▂▁▃▆▄▄▃▄▄▂▁▃▅▂▃▄▁▃
+wandb:  train_mask_loss_latitude_no_abs ▇▆█▆▂▃▄▁▂▃▂▁▂▂▂▂▄▄▂▃▁▂▅▄▂▂▂▆▂▁▃▁▃▂▄▃▃▃▁▄
+wandb: train_mask_loss_longitude_no_abs █▆▆▄▂▃▃▄▂▁▂▁▃▂▁▂▂▃▂▃▁▃▃▁▃▁▂▁▁▂▄▁▄▂▁▂▂▂▆▁
+wandb:            train_mask_loss_speed ▄▆▃▃▃▅▂▃▁▃▁█▅▃▃▃▃▅▃▂▂▄▄▂▃▃▃▅▄▂▂▅▁▁▂▁▅▃▂▂
+wandb:             train_mask_loss_time ▇▅▅▆▃▅▃▅▃▅▄█▅▅▅▃▅▆▅▅▅▃▄▆▃▁▄▂▄▃▆▂▄▄▃▄▃▅▃▄
+wandb:         train_sum_loss_direction ▇█▇▅▄█▆▃▁▂▆▂▄▁▄▆▂▆▂▁▁▃▂▁▃▆▄▄▃▄▄▂▁▃▅▂▃▄▁▃
+wandb:   train_sum_loss_latitude_no_abs ▆▅█▆▂▃▄▁▂▃▂▁▂▂▂▂▄▄▂▃▁▂▅▄▂▂▂▆▂▁▃▁▃▂▄▃▃▃▁▃
+wandb:  train_sum_loss_longitude_no_abs █▆▆▄▂▃▃▄▂▁▂▁▃▂▁▂▂▃▂▃▁▃▃▁▃▁▂▁▁▂▄▁▄▂▁▂▂▂▆▁
+wandb:             train_sum_loss_speed ▄▆▃▃▃▅▂▃▁▃▁█▅▃▃▃▃▅▃▂▂▄▄▂▃▃▃▅▄▂▂▅▁▁▂▁▅▃▂▂
+wandb:              train_sum_loss_time ▇▅▅▆▃▅▃▅▃▅▄█▅▅▅▃▅▆▅▅▅▃▄▆▃▁▄▂▄▃▆▂▄▄▃▄▃▅▃▄
+wandb:
+wandb: Run summary:
+wandb:                         loss_avg 0.2981
+wandb:                             norm 0
+wandb:         train_cls_loss_direction 0.04091
+wandb:   train_cls_loss_latitude_no_abs 0.02618
+wandb:  train_cls_loss_longitude_no_abs 0.01183
+wandb:             train_cls_loss_speed 0.01307
+wandb:              train_cls_loss_time 0.5822
+wandb:                   train_loss_avg 0.2981
+wandb:        train_mask_loss_direction 0.04125
+wandb:  train_mask_loss_latitude_no_abs 0.02586
+wandb: train_mask_loss_longitude_no_abs 0.01189
+wandb:            train_mask_loss_speed 0.01313
+wandb:             train_mask_loss_time 0.57929
+wandb:         train_sum_loss_direction 0.00064
+wandb:   train_sum_loss_latitude_no_abs 0.00041
+wandb:  train_sum_loss_longitude_no_abs 0.00019
+wandb:             train_sum_loss_speed 0.0002
+wandb:              train_sum_loss_time 0.00907
+wandb:
+wandb:  View run ALL_task_UniTS_zeroshot_pretrain_x64_mine_all_10_train_UniTS_zeroshot_All_ftM_dm64_el3_Exp at: https://wandb.ai/lucija_zuzic/pretrain/runs/kw2jodhx
+wandb:  View job at https://wandb.ai/lucija_zuzic/pretrain/jobs/QXJ0aWZhY3RDb2xsZWN0aW9uOjE1MTAxMjQwOQ==/version_details/v57
+wandb: Synced 6 W&B file(s), 0 media file(s), 2 artifact file(s) and 0 other file(s)
+wandb: Find logs at: .\wandb\run-20240426_120041-kw2jodhx\logs
+
